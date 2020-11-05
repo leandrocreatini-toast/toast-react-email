@@ -17,8 +17,9 @@ body {
 }
 
 .card {
-  margin: 0 0 20px;
+  display: block;
   background: #fff;
+  margin: 0 0 20px;
   padding: 40px;
 }
 
@@ -112,6 +113,7 @@ hr,
 }
 
 .layout {
+  display: block;
   width: 400px;
   margin: 48px auto;
 }

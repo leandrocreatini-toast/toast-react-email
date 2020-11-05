@@ -4,9 +4,9 @@ import cx from 'classnames'
 
 // components
 export const Layout = ({children, ...rest}) => (
-  <div className="layout" {...rest}>
+  <span className="layout" {...rest}>
     {children}
-  </div>
+  </span>
 )
 
 export const Grid = ({children, ...rest}) => (
@@ -28,9 +28,9 @@ export const Box = ({children, className, span, ...rest}) => (
 )
 
 export const Card = ({children, className}) => (
-  <div className={cx('card', className)}>
+  <span className={cx('card', className)}>
     {children}
-  </div>
+  </span>
 )
 
 export const Header = ({children, className, level = 2, ...rest}) => {
