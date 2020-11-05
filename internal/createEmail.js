@@ -7,9 +7,11 @@ const ReactDOMServer = require('react-dom/server');
 const Email = require('../.build/Email').default;
 
 const DEFAULT_TITLE = 'Toast';
+const DEFAULT_BG = '#fff';
 
 const TITLE_TAG = '%TITLE%';
 const STYLE_TAG = '%STYLE%';
+const BG_TAG = '%BG%';
 const CONTENT_TAG = '%CONTENT%';
 
 /**
@@ -45,9 +47,11 @@ function createEmail(data) {
 
       // Replace the template tags with the content
       let emailHTML = template;
-      emailHTML = emailHTML.replace(TITLE_TAG, data.title || DEFAULT_TITLE);
-      emailHTML = emailHTML.replace(STYLE_TAG, style);
-      emailHTML = emailHTML.replace(CONTENT_TAG, content);
+      emailHTML = emailHTML
+        .replace(TITLE_TAG, data.title || DEFAULT_TITLE)
+        .replace(BG_TAG, data.bgColor || DEFAULT_BG)
+        .replace(STYLE_TAG, style)
+        .replace(CONTENT_TAG, content)
 
       return emailHTML;
     });
