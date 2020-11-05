@@ -18,14 +18,11 @@
     "react-scripts": "4.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
     "build": "NODE_ENV=production babel src --out-dir .build && node internal/index.js",
     "build:transpile": "NODE_ENV=development babel src --watch --out-dir .build",
     "build:html": "nodemon internal/index.js -e js,css",
     "build:reload": "browser-sync start -s 'public' -f 'public'",
     "dev": "yarn build:transpile & yarn build:html & yarn build:reload",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
