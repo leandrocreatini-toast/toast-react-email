@@ -22,7 +22,7 @@
     "build:transpile": "NODE_ENV=development babel src --watch --out-dir .build",
     "build:html": "nodemon internal/index.js -e js,css",
     "build:reload": "browser-sync start -s 'public' -f 'public'",
-    "dev": "yarn build:transpile & yarn build:html & yarn build:reload",
+    "dev": "yarn build:transpile & yarn build:html & yarn build:reload"
   },
   "eslintConfig": {
     "extends": [
