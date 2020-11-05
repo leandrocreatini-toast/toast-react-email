@@ -7,11 +7,13 @@ import {
   Row,
   Box,
   Card,
+  Image,
   Header,
   Text,
   Link,
   Microcopy,
   Circle,
+  Divider,
   ItemLine
 } from './components'
 
@@ -28,7 +30,7 @@ function Email({ data }) {
       <Grid>
         <Row align="center">
           <Box span="8">
-            <img
+            <Image
               className="logo mb-10"
               src="https://cdn.toasttab.com/static/d2ccf73204a9f598b46289ae4f168db2a888e8be/images/ecomm/email/activation/header_logo_toast.png"
               alt="Toast logo"
@@ -82,13 +84,19 @@ function Email({ data }) {
         </Grid>
       </Card>
 
-      <Card>        
-        <Header level={2}>Order Details</Header>
-        <Text className="mb-2">Order #{data.orderNumber}</Text>
-        <Text className="mb-6">Date Ordered: {data.orderDate}</Text>
-        <Grid>        
+      <Card>
+        <Grid>
           <Row>
-            <Box span="4" className="">
+            <Box span="8">        
+              <Header level={2}>Order Details</Header>
+              <Text>Order #{data.orderNumber}</Text>
+              <Text className="mb-6">Date Ordered: {data.orderDate}</Text>
+            </Box>
+          </Row>
+        </Grid>
+        <Grid>
+          <Row>
+            <Box span="4">
               <Header level={4}>Shipping Info</Header>
               <Text className="text-sm">{data.shipping.customerName}</Text>
               <Text className="text-sm">{data.shipping.addressLineOne}</Text>
@@ -137,7 +145,7 @@ function Email({ data }) {
             </Grid>
           </>
         )}
-        <hr />
+        <Divider />
         <Grid>
           <Row>
             <Box span="6">
@@ -156,7 +164,7 @@ function Email({ data }) {
             </Box>
           </Row>
         </Grid>
-        <hr />
+        <Divider />
         <Grid>
           <Row>
             <Box span="6">
@@ -173,7 +181,7 @@ function Email({ data }) {
       <Grid>
         <Row align="center">
           <Box span="8" className="mb-4">
-            <img 
+            <Image 
               className="mb-4"
               src="https://cdn.toasttab.com/static/9571ead87167510edcf8ab5b974d5eea79937320/images/powered-by-toast-orange.png"
               alt="powered by Toast"

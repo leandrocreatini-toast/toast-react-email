@@ -48,7 +48,7 @@ export const Text = ({children, className, ...rest}) => (
 )
 
 export const Link = ({children, className, ...rest}) => (
-  <a className={cx('link', className)} {...rest}>
+  <a className={cx('link', className)} {...rest} target="_blank" rel="noopener noreferrer nofollow">
     {children}
   </a>
 )
@@ -65,6 +65,10 @@ export const Circle = ({children, className, ...rest}) => (
   </span>
 )
 
+export const Image = ({className, alt, ...rest}) => (
+  <img className={cx('image', className)} alt={alt} {...rest} />
+)
+
 export const ItemLine = ({item}) => (
   <Row>
     <Box span="1">
@@ -77,4 +81,8 @@ export const ItemLine = ({item}) => (
       <Text className="text-right">{item.total}</Text>
     </Box>
   </Row>
+)
+
+export const Divider = () => (
+  <hr className="divider" />
 )

@@ -46,8 +46,8 @@ function createEmail(data) {
       // Replace the template tags with the content
       let emailHTML = template;
       emailHTML = emailHTML.replace(TITLE_TAG, data.title || DEFAULT_TITLE);
-      emailHTML = emailHTML.replace(CONTENT_TAG, content);
       emailHTML = emailHTML.replace(STYLE_TAG, style);
+      emailHTML = emailHTML.replace(CONTENT_TAG, content);
 
       return emailHTML;
     });
