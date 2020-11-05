@@ -1,21 +1,19 @@
 // global
 import React from 'react'
 // local
-import {
-  Layout,
-  Grid,
-  Row,
-  Box,
-  Card,
-  Image,
-  Header,
-  Text,
-  Link,
-  Microcopy,
-  Circle,
-  Divider,
-  ItemLine
-} from './components'
+import { Box } from './components/Box'
+import { Card } from './components/Card'
+import { Circle } from './components/Circle'
+import { Divider } from './components/Divider'
+import { Grid } from './components/Grid'
+import { Header } from './components/Header'
+import { Image } from './components/Image'
+import { ItemLine } from './components/ItemLine'
+import { Layout } from './components/Layout'
+import { Link } from './components/Link'
+import { Microcopy } from './components/Microcopy'
+import { Row, FullRow } from './components/Row'
+import { Text } from './components/Text'
 
 const isSubscription = (item) => item.category === 'software'
 const isHardware = (item) => item.category === 'hardware'
@@ -28,28 +26,24 @@ function Email({ data }) {
   return (
     <Layout>
       <Grid>
-        <Row align="center">
-          <Box span="8">
-            <Image
-              className="logo mb-10"
-              src="https://cdn.toasttab.com/static/d2ccf73204a9f598b46289ae4f168db2a888e8be/images/ecomm/email/activation/header_logo_toast.png"
-              alt="Toast logo"
-            />
-          </Box>
-        </Row>
+        <FullRow align="center">
+          <Image
+            className="logo mb-10"
+            src="https://cdn.toasttab.com/static/d2ccf73204a9f598b46289ae4f168db2a888e8be/images/ecomm/email/activation/header_logo_toast.png"
+            alt="Toast logo"
+          />
+        </FullRow>
       </Grid>
 
       <Card>
         <Grid>
-          <Row align="center">
-            <Box span="8">
-              <img
-                className="mt-4 mb-8"
-                src="https://cdn.toasttab.com/static/8b28841d401526fc7176cecf2d2f2cf95171ec82/images/project_ui/celebration.svg"
-                alt="Welcome"
-              />
-            </Box>
-          </Row>
+          <FullRow align="center">
+            <Image
+              className="mt-4 mb-8"
+              src="https://cdn.toasttab.com/static/8b28841d401526fc7176cecf2d2f2cf95171ec82/images/project_ui/celebration.svg"
+              alt="Welcome"
+            />
+          </FullRow>
         </Grid>
         <Header level={1} className="text-center">
           {data.restaurantName} is growing!
@@ -86,13 +80,11 @@ function Email({ data }) {
 
       <Card>
         <Grid>
-          <Row>
-            <Box span="8">        
-              <Header level={2}>Order Details</Header>
-              <Text>Order #{data.orderNumber}</Text>
-              <Text className="mb-6">Date Ordered: {data.orderDate}</Text>
-            </Box>
-          </Row>
+          <FullRow>        
+            <Header level={2}>Order Details</Header>
+            <Text>Order #{data.orderNumber}</Text>
+            <Text className="mb-6">Date Ordered: {data.orderDate}</Text>
+          </FullRow>
         </Grid>
         <Grid>
           <Row>
@@ -145,7 +137,9 @@ function Email({ data }) {
             </Grid>
           </>
         )}
+
         <Divider />
+
         <Grid>
           <Row>
             <Box span="6">
@@ -164,7 +158,9 @@ function Email({ data }) {
             </Box>
           </Row>
         </Grid>
+
         <Divider />
+        
         <Grid>
           <Row>
             <Box span="6">
@@ -179,27 +175,21 @@ function Email({ data }) {
       </Card>
       
       <Grid>
-        <Row align="center">
-          <Box span="8" className="mb-4">
-            <Image 
-              className="mb-4"
-              src="https://cdn.toasttab.com/static/9571ead87167510edcf8ab5b974d5eea79937320/images/powered-by-toast-orange.png"
-              alt="powered by Toast"
-            />
-          </Box>
-        </Row>
-        <Row align="center">
-          <Box span="8">
+        <FullRow align="center" className="mb-4">
+          <Image 
+            className="mb-4"
+            src="https://cdn.toasttab.com/static/9571ead87167510edcf8ab5b974d5eea79937320/images/powered-by-toast-orange.png"
+            alt="powered by Toast"
+          />
+        </FullRow>
+        <FullRow align="center">
             <Link className="mb-2">Privacy Policy</Link>{' '}|{' '}
             <Link>Terms of Service</Link>{' '}|{' '}
             <Link>Refer a Restaurant & Earn $500</Link>
-          </Box>
-        </Row>
-        <Row>
-          <Box span="8">
-            <Microcopy className="text-center">©Toast, Inc. {new Date().getFullYear()}. All Rights Reserved</Microcopy>
-          </Box>
-        </Row>
+        </FullRow>
+        <FullRow>
+          <Microcopy className="text-center">©Toast, Inc. {new Date().getFullYear()}. All Rights Reserved</Microcopy>
+        </FullRow>
       </Grid>
     </Layout>
   );
