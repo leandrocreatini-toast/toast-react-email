@@ -1,10 +1,8 @@
-const fs = require('fs');
-const Path = require('path');
-
 const React = require('react');
 const ReactDOMServer = require('react-dom/server');
 
 const Email = require('../.build/Email').default;
+const getFile = require('./getFile')
 
 const DEFAULT_TITLE = 'Toast';
 const DEFAULT_BG = '#fff';
@@ -13,22 +11,6 @@ const TITLE_TAG = '%TITLE%';
 const STYLE_TAG = '%STYLE%';
 const BG_TAG = '%BG%';
 const CONTENT_TAG = '%CONTENT%';
-
-/**
- * Get the file from a relative path
- * @param {String} relativePath
- * @return {Promise.<string>}
- */
-function getFile(relativePath) {
-  return new Promise((resolve, reject) => {
-    const path = Path.join(__dirname, relativePath);
-
-    return fs.readFile(path, { encoding: 'utf8' }, (err, file) => {
-      if (err) return reject(err);
-      return resolve(file);
-    })
-  });
-}
 
 /**
  * Renders the React app with the passed data.
