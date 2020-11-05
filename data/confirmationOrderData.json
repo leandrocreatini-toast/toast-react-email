@@ -1,0 +1,71 @@
+{
+  "title": "Your Toast Order Confirmation",
+  "restaurantName": "The Black Sheep",
+  "orderNumber": "000001446",
+  "orderDate": "05/21/2020",
+  "shipping": {
+    "method": "Ground",
+    "customerName": "Elena Tsepota",
+    "addressLineOne": "101 Arrowhead Cir",
+    "addressLineTwo": "",
+    "city": "Ashland",
+    "state": "MA",
+    "zip": "01721",
+    "phone": "5083443444"
+  },
+  "billing": {
+    "method": "Credit Card",
+    "customerName": "Elena Tsepota",
+    "addressLineOne": "101 Arrowhead Cir",
+    "addressLineTwo": "",
+    "city": "Ashland",
+    "state": "MA",
+    "zip": "01721",
+    "phone": "5083443444"
+  },
+  "items": [
+    {
+      "sku": "123",
+      "name": "POS Software",
+      "quantity": "1",
+      "total": "$35.00",
+      "category": "software",
+      "isRecurring": true
+    },
+    {
+      "sku": "124",
+      "name": "Online Ordering",
+      "quantity": "1",
+      "total": "$25.00",
+      "category": "software",
+      "isRecurring": true
+    },
+    {
+      "sku": "125",
+      "name": "Toast Starter Kit",
+      "quantity": "1",
+      "total": "$999.00",
+      "category": "hardware",
+      "isRecurring": false
+    },
+    {
+      "sku": "126",
+      "name": "Toast Printer",
+      "quantity": "1",
+      "total": "$199.00",
+      "category": "hardware",
+      "isRecurring": false
+    },
+    {
+      "sku": "127",
+      "name": "Cash Drawer",
+      "quantity": "1",
+      "total": "$75.00",
+      "category": "hardware",
+      "isRecurring": false
+    }
+  ],
+  "shippingCost": "$79.90",
+  "salesTax": "$78.07",
+  "totalCost": "$1430.97"
+}
