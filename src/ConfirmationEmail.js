@@ -45,8 +45,8 @@ function ConfirmationEmail({ data }) {
             <Image
               width="200px"
               className="mt-4 mb-8"
-              src="https://cdn.toasttab.com/static/e49e6157c2ed028bd41c38a0b44ba31cbc1174d8/images/ecomm/email/confirmation/growing-restaurant.svg"
-              alt="Welcome"
+              src="https://cdn.toasttab.com/static/3499b6a3a399778caddb37da2eacc61997100219/images/ecomm/email/confirmation/growing-restaurant.png"
+              alt="Growing Restaurant"
             />
           </FullRow>
         </Grid>
