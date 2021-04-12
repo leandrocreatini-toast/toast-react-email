@@ -1,6 +1,6 @@
 body {
   background: #f7f8fb;
-  font-family: Arial;
+  font-family: 'Source Sans Pro', Arial;
 }
 
 .grid {
@@ -21,22 +21,24 @@ body {
 }
 
 .text {
+  font-family: 'Source Sans Pro', Arial;
   display: block;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.3px;
   text-align: left;
-  color: #222121;
+  color: #252525;
   margin: 0 0 8px;
 }
 
 .h1 {
-  font-size: 28px;
-  font-weight: bold;
-  line-height: 1.14;
+  font-family: 'Effra Medium', Arial;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
   letter-spacing: normal;
   text-align: left;
-  color: #222121;
+  color: #252525;
   margin: 0 0 24px;
 }
 
@@ -45,7 +47,7 @@ body {
   font-weight: bold;
   line-height: 1.17;
   letter-spacing: 0.4px;
-  color: rgba(0, 0, 0, 0.87);
+  color: #252525;
   margin: 0 0 24px;
 }
 
@@ -54,7 +56,7 @@ body {
   font-weight: bold;
   line-height: 1.4;
   letter-spacing: normal;
-  color: #222121;
+  color: #252525;
   margin: 0 0 24px;
 }
 
@@ -63,7 +65,7 @@ body {
   font-weight: bold;
   line-height: 1.25;
   letter-spacing: 0.3px;
-  color: rgba(0, 0, 0, 0.87);
+  color: #252525;
   margin: 0 0 12px;
 }
 
@@ -71,24 +73,42 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.5px;
-  color: rgba(0, 0, 0, 0.56);
+  color: #666666;
   margin: 0 0 8px;
+}
+
+.secondary {
+  color: #525252;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .link {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.5px;
-  color: #1a45ab;
+  color: #2b4fb9;
 }
 
-.logo {
-  height: 28px;
+.bullet {
+  display: inline-block;
+  background: #ff4c00;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  line-height: 8px;
+  margin: 20px 16px;
 }
 
 .circle {
   display: inline-block;
-  background: #1a45ab;
+  background: #2b4fb9;
   border-radius: 50%;
   width: 32px;
   height: 32px;
@@ -110,8 +130,8 @@ hr,
 
 .layout {
   width: 400px;
-  margin: 48px auto;
 }
+
 .span-1 {
   width: 50px;
 }
@@ -172,6 +192,9 @@ hr,
 .mb-10 {
   margin-bottom: 40px;
 }
+.mb-12 {
+  margin-bottom: 48px;
+}
 .pb-4 {
   margin-bottom: 16px;
 }
@@ -207,4 +230,10 @@ hr,
   .span-8 {
     width: 600px;
   }
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
 }

@@ -1,18 +1,21 @@
 // global
 import React from 'react'
-import cx from 'classnames'
+// local
+import { fromTailwind } from '../utils/mailwind'
 
-// inline-styles
-const textStyles = {
-  display: 'block',
-}
+const styles = fromTailwind({
+  text: 'type-default',
+  inlineText: 'type-default inline-block'
+})
 
-export const Text = ({children, className, ...rest}) => (
-  <p
-    className={cx('text', className)}
-    style={textStyles}
-    {...rest}
-  >
+export const Text = ({ children, className, ...rest }) => (
+  <p style={styles.text} {...rest}>
+    {children}
+  </p>
+)
+
+export const InlineText = ({ children, className, ...rest }) => (
+  <p style={styles.inlineText} {...rest}>
     {children}
   </p>
 )
