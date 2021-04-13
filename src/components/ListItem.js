@@ -2,19 +2,27 @@
 import * as React from 'react'
 // local
 import { fromTailwind } from '../utils/mailwind'
+import { Box } from './Box'
 import { Bullet } from './Bullet'
+import { Row } from './Row'
 
 const styles = fromTailwind({
-  container: 'block clear-fix',
-  bullet: 'float-left clear-left',
-  item: 'ml-1 inline-block float-left clear-right'
+  bulletBox: 'w-4',
+  bullet: 'w-2 h-2',
+  bulletSecondary: 'w-2 h-2 bg-gray-75',
+  itemBox: 'w-full',
+  item: 'ml-1 inline-block'
 })
 
-export const ListItem = ({ children }) => {
+export const ListItem = ({ secondary, children }) => {
   return (
-    <div style={styles.container}>
-      <Bullet style={styles.bullet} />
-      <div style={styles.item}>{children}</div>
-    </div>
+    <Row>
+      <Box style={styles.bulletBox}>
+        <Bullet style={secondary ? styles.bulletSecondary : styles.bullet} />
+      </Box>
+      <Box style={styles.itemBox}>
+        <div style={styles.item}>{children}</div>
+      </Box>
+    </Row>
   )
 }

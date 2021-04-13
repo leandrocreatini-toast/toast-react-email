@@ -9,19 +9,19 @@ import { Row } from '../components/Row'
 import { Box } from '../components/Box'
 
 const styles = fromTailwind({
-  heading: 'type-headline-4',
-  subheading: 'type-headline-5',
+  heading: 'type-headline-4 mb-2',
+  subheading: 'type-headline-5 text-base mt-1',
   sectionHeading: 'type-default mb-3',
-  text: 'type-small text-gray-75 leading-none mt-1 mb-2'
+  text: 'type-small text-base text-gray-75 leading-none mt-1 mb-2'
 })
 
 export const BillingShipping = ({ style, orderNumber, orderDate }) => {
   return (
     <div style={style}>
       <Heading level='3' style={styles.heading}>
-        Your Order #{orderNumber}
+        Your Order #000014011
       </Heading>
-      <Text style={styles.subheading}>Placed on {orderDate}</Text>
+      <Text style={styles.subheading}>Placed on Mar 17, 2021, 8:45:35 AM</Text>
       <Grid>
         <Row>
           <Box span='4'>

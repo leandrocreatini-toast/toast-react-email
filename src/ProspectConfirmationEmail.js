@@ -9,7 +9,8 @@ import { BillingShipping } from './sections/BillingShipping'
 import { Footer } from './sections/Footer'
 import { Head } from './sections/Head'
 import { NextSteps } from './sections/NextSteps'
-import { OrderItems } from './sections/OrderItems'
+import { OrderItemsHardware } from './sections/OrderItemsHardware'
+import { OrderItemsSoftware } from './sections/OrderItemsSoftware'
 import { PlanOverview } from './sections/PlanOverview'
 
 const styles = fromTailwind({
@@ -18,6 +19,8 @@ const styles = fromTailwind({
   step: 'block clear-fix',
   planDetail: 'block clear-fix text-secondary',
   billing: 'mt-16 mb-16',
+  hardwareItems: 'mt-16 mb-16',
+  softwareItems: 'mt-16 mb-16',
   illustration: 'w-full',
   questionCopy: 'text-small text-secondary',
   link: 'text-link',
@@ -52,7 +55,9 @@ function ProspectConfirmationEmail({ data }) {
 
         <BillingShipping style={styles.billing} />
 
-        <OrderItems />
+        <OrderItemsHardware style={styles.hardwareItems} />
+
+        <OrderItemsSoftware />
 
         <PlanOverview
           planType='Pay as You Go pricing'

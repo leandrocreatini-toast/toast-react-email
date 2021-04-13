@@ -13,7 +13,7 @@ const styles = fromTailwind({
   price: 'font-medium text-right'
 })
 
-export const ItemLine = ({ name, quantity, price, term }) => (
+export const ItemLineSoftware = ({ name, quantity, price, term }) => (
   <Row style={styles.row}>
     <Box span='4'>
       <Text style={styles.text}>{name}</Text>
@@ -22,7 +22,7 @@ export const ItemLine = ({ name, quantity, price, term }) => (
       <Text style={styles.text}>{quantity}</Text>
     </Box>
     <Box span='2'>
-      <Text style={styles.price}>{formatCurrency(price)}</Text>
+      <Text style={styles.price}>{formatCurrency(price, 0)}/month</Text>
     </Box>
   </Row>
 )

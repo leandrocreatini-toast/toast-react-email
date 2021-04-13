@@ -16,13 +16,14 @@ const styles = fromTailwind({
   text: 'mt-1 mb-3',
   boldText: 'mt-1 mb-3 font-bold',
   rightText: 'mt-1 mb-3 text-right',
-  space: 'block h-12 w-full',
+  space: 'block h-8 w-full',
   totalsGroup: 'w-full'
 })
 
-export const OrderItems = () => {
+export const OrderItemsHardware = ({ style }) => {
   return (
-    <div style={styles.container}>
+    <div style={style}>
+      {/* HARDWARE + INSTALLATION ITEMS */}
       <Grid style={styles.table}>
         {/* Heading */}
         <Row style={styles.headingGroup}>

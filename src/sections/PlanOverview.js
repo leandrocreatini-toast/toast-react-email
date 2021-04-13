@@ -2,6 +2,7 @@
 import * as React from 'react'
 // local
 import { Card } from '../components/Card'
+import { Grid } from '../components/Grid'
 import { Heading } from '../components/Heading'
 import { Image } from '../components/Image'
 import { ListItem } from '../components/ListItem'
@@ -25,11 +26,13 @@ export const PlanOverview = ({ planType, items }) => {
           Your plan: <b>{planType}</b>
         </Heading>
       </div>
-      <div>
+      <Grid>
         {items.map((item, idx) => (
-          <ListItem key={`detail-${idx}`}>{item}</ListItem>
+          <ListItem secondary key={`detail-${idx}`}>
+            {item}
+          </ListItem>
         ))}
-      </div>
+      </Grid>
     </Card>
   )
 }
