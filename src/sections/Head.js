@@ -4,7 +4,7 @@ import * as React from 'react'
 import { fromTailwind } from '../utils/mailwind'
 import { Grid } from '../components/Grid'
 import { Heading } from '../components/Heading'
-import { HeaderLogo } from '../components/HeaderLogo'
+import { ToastLogo } from '../components/ToastLogo'
 import { FullRow } from '../components/Row'
 import { Text } from '../components/Text'
 
@@ -16,7 +16,7 @@ const styles = fromTailwind({
 export const Head = ({ style, heading, text }) => {
   return (
     <Grid style={style}>
-      <HeaderLogo />
+      <ToastLogo />
       <FullRow>
         <Heading level='1' style={styles.heading}>
           {heading}

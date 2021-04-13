@@ -1,18 +1,15 @@
 // global
 import React from 'react'
-import cx from 'classnames'
+// local
+import { fromTailwind } from '../utils/mailwind'
 
-// inline-styles
-const layoutStyles = {
-  display: 'block',
-  margin: '48px auto',
-  padding: '48px',
-  background: '#ffffff'
-}
+const styles = fromTailwind({
+  container: 'block mt-12 mb-12 mr-auto ml-auto'
+})
 
 // component
 export const Layout = ({ children, className, ...rest }) => (
-  <span className={cx('layout', className)} style={layoutStyles} {...rest}>
+  <span className='layout' style={styles.container} {...rest}>
     {children}
   </span>
 )

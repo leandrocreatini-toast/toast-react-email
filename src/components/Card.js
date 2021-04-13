@@ -1,14 +1,12 @@
 // global
 import React from 'react'
-import cx from 'classnames'
+// local
+import { fromTailwind } from '../utils/mailwind'
 
-// inline-styles
-const cardStyles = {
-  display: 'block',
-}
+const styles = fromTailwind({
+  container: 'border-2 border-gray-200 rounded-lg p-6'
+})
 
-export const Card = ({children, className}) => (
-  <span className={cx('card', className)} style={cardStyles}>
-    {children}
-  </span>
+export const Card = ({ children }) => (
+  <div style={styles.container}>{children}</div>
 )

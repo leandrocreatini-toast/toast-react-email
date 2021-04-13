@@ -40,7 +40,7 @@ const sizingConfig = {
   ]
 }
 
-const spacingClasses = makeTailwindSizedClasses(
+const spacingStyles = makeTailwindSizedClasses(
   spacingRulesMapping,
   sizingConfig
 )
@@ -120,6 +120,17 @@ const lineHeight = {
 const fontStyleStyles = {
   italic: { fontStyle: 'italic' },
   'not-italic': { fontStyle: 'normal' }
+}
+
+const fontSizeStyles = {
+  'text-xs': { fontSize: '12px', lineHeight: '16px' },
+  'text-sm': { fontSize: '14px', lineHeight: '18px' },
+  'text-base': { fontSize: '16px', lineHeight: '24px' },
+  'text-lg': { fontSize: '18px', lineHeight: '22px' },
+  'text-xl': { fontSize: '20px', lineHeight: '28px' },
+  'text-2xl': { fontSize: '24px', lineHeight: '32px' },
+  'text-3xl': { fontSize: '30px', lineHeight: '36px' },
+  'text-4xl': { fontSize: '36px', lineHeight: '40px' }
 }
 
 const fontWeightStyles = {
@@ -206,7 +217,8 @@ const typographyStyles = {
     fontSize: '12px',
     lineHeight: '14px',
     letterSpacing: 1.2
-  }
+  },
+  underline: { 'text-decoration': 'underline' }
 }
 
 const displayStyles = {
@@ -231,7 +243,7 @@ const displayStyles = {
   contents: { display: 'contents' }
 }
 
-const colorStyles = {
+const textColorStyles = {
   'text-white': { color: '#fff' },
   'text-default': { color: '#252525' },
   'text-secondary': { color: '#666666' },
@@ -267,6 +279,52 @@ const colorStyles = {
   'text-brand-0': { color: '#fce8e5' },
   //Red
   'text-red-100': { color: '#B4001E' }
+}
+
+const backgroundColorStyles = {
+  'bg-transparent': { background: 'transparent' },
+  'bg-black': { background: '#000' },
+  'bg-richBlack': { background: '#252525' },
+  'bg-white': { background: '#fff' },
+  'bg-focus': { background: '#558EDD' },
+  'bg-lighten-80': { background: 'rgba(255,255,255, 0.8)' },
+  'bg-lighten-60': { background: 'rgba(255,255,255, 0.6)' },
+  'bg-darken-56': { background: 'rgba(0, 0, 0, 0.56)' },
+  'bg-darken-30': { background: 'rgba(0, 0, 0, 0.3)' },
+  'bg-darken-20': { background: 'rgba(0, 0, 0, 0.2)' },
+  'bg-darken-12': { background: 'rgba(0, 0, 0, 0.12)' },
+  'bg-darken-8': { background: 'rgba(0, 0, 0, 0.08)' },
+  'bg-darken-4': { background: 'rgba(0, 0, 0, 0.04)' },
+  'bg-brand-100': { background: '#c12700' },
+  'bg-brand-75': { background: '#DD3B11' },
+  'bg-brand-50': { background: '#FF4C00' },
+  'bg-brand-25': { background: '#ffa788' },
+  'bg-brand-0': { background: '#fce8e5' },
+  'bg-primary-100': { background: '#002182' },
+  'bg-primary-75': { background: '#2B4FB9' },
+  'bg-primary-50': { background: '#5069C3' },
+  'bg-primary-25': { background: '#9aa6db' },
+  'bg-primary-0': { background: '#e7eaf6' },
+  'bg-red-100': { background: '#B4001E' },
+  'bg-lavender-0': { background: '#F2E7FA' },
+  'bg-orchid-0': { background: '#F9E4F7' },
+  'bg-gray-125': { background: '#252525' },
+  'bg-gray-110': { background: '#474747' },
+  'bg-gray-100': { background: '#666666' },
+  'bg-gray-75': { background: '#7A7A7A' },
+  'bg-gray-50': { background: '#C0C0C0' },
+  'bg-gray-30': { background: '#e5e5e5' },
+  'bg-gray-25': { background: '#f0f0f0' },
+  'bg-gray-0': { background: '#f7f7f7' },
+  'bg-neutral-75': { background: '#001b59' },
+  'bg-neutral-0': { background: '#E3F0FB' },
+  'bg-warning-75': { background: '#c54300' },
+  'bg-warning-0': { background: '#FEF6D9' },
+  'bg-error-100': { background: '#B4001E' },
+  'bg-error-75': { background: '#d40023' },
+  'bg-error-0': { background: '#FFE6E9' },
+  'bg-success-75': { background: '#006400' },
+  'bg-success-0': { background: '#E8F7D4' }
 }
 
 const borderRadiusStyles = {
@@ -317,18 +375,29 @@ const floatStyles = {
   'clear-fix': { clear: 'both', display: 'table' }
 }
 
+const sizingStyles = {
+  'w-full': { width: '100%' },
+  'w-1/2': { width: '50%' },
+  'h-full': { height: '100%' },
+  'mr-auto': { marginRight: 'auto' },
+  'ml-auto': { marginLeft: 'auto' }
+}
+
 const supportedTailwindClasses = {
-  ...spacingClasses,
+  ...spacingStyles,
+  ...sizingStyles,
+  ...backgroundColorStyles,
   ...borderStyles,
   ...borderRadiusStyles,
   ...borderColorStyles,
   ...displayStyles,
   ...fontStyleStyles,
+  ...fontSizeStyles,
   ...fontWeightStyles,
   ...lineHeight,
   ...listStyles,
   ...typographyStyles,
-  ...colorStyles,
+  ...textColorStyles,
   ...floatStyles
 }
 
