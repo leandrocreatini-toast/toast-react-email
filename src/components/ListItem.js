@@ -7,7 +7,7 @@ import { Bullet } from './Bullet'
 const styles = fromTailwind({
   container: 'block clear-fix',
   bullet: 'float-left clear-left',
-  item: 'ml-2 inline-block float-left clear-right'
+  item: 'ml-1 inline-block float-left clear-right'
 })
 
 export const ListItem = ({ children }) => {

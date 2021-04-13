@@ -10,7 +10,8 @@ import { BillingShipping } from './sections/BillingShipping'
 
 const styles = fromTailwind({
   head: 'mb-6',
-  step: 'block clear-fix'
+  step: 'block clear-fix',
+  billing: 'mt-16 mb-16'
 })
 
 /* RENDER EMAIL */
@@ -37,7 +38,7 @@ function ProspectConfirmationEmail({ data }) {
           </Text>
         ]}
       />
-      <BillingShipping />
+      <BillingShipping style={styles.billing} />
     </Layout>
   )
 }
