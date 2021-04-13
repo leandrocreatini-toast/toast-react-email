@@ -2,13 +2,14 @@
 import React from 'react'
 // local
 import { fromTailwind } from './utils/mailwind'
+import { Image } from './components/Image'
 import { Layout } from './components/Layout'
 import { Text } from './components/Text'
-import { Head } from './sections/Head'
-import { Footer } from './sections/Footer'
-import { NextSteps } from './sections/NextSteps'
 import { BillingShipping } from './sections/BillingShipping'
-import { Image } from './components/Image'
+import { Footer } from './sections/Footer'
+import { Head } from './sections/Head'
+import { NextSteps } from './sections/NextSteps'
+import { OrderItems } from './sections/OrderItems'
 import { PlanOverview } from './sections/PlanOverview'
 
 const styles = fromTailwind({
@@ -33,6 +34,7 @@ function ProspectConfirmationEmail({ data }) {
           heading="Thank you for ordering. We're excited to get you started!"
           text="You're almost ready to start using the #1 point of Sale system for Restaurants."
         />
+
         <NextSteps
           restaurantName="Monk's Cafe"
           items={[
@@ -47,7 +49,10 @@ function ProspectConfirmationEmail({ data }) {
             </Text>
           ]}
         />
+
         <BillingShipping style={styles.billing} />
+
+        <OrderItems />
 
         <PlanOverview
           planType='Pay as You Go pricing'
@@ -70,6 +75,7 @@ function ProspectConfirmationEmail({ data }) {
         style={styles.illustration}
         src='https://d2w1ef2ao9g8r9.cloudfront.net/images/email-images/Illustration.jpg'
       />
+
       <Footer style={styles.footer} />
     </Layout>
   )

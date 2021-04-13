@@ -62,11 +62,14 @@ function convertFromTailwind(tailwindClasses) {
   return (cssClassObject) => {
     let output = {}
     Object.keys(cssClassObject).forEach((className) => {
-      output[className] = cssClassObject[className]
-        .split(' ')
-        .reduce((acc, tailwindClass) => {
-          return { ...acc, ...tailwindClasses[tailwindClass] }
-        }, {})
+      output[className] =
+        typeof cssClassObject[className] === 'string'
+          ? cssClassObject[className]
+              .split(' ')
+              .reduce((acc, tailwindClass) => {
+                return { ...acc, ...tailwindClasses[tailwindClass] }
+              }, {})
+          : cssClassObject[className]
     })
     return output
   }
@@ -151,6 +154,13 @@ const listStyles = {
   'list-decimal': { listStyleType: 'decimal' }
 }
 
+const textAlignStyles = {
+  'text-left': { textAlign: 'left' },
+  'text-center': { textAlign: 'center' },
+  'text-right': { textAlign: 'right' },
+  'text-justify': { textAlign: 'justify' }
+}
+
 const typographyStyles = {
   'type-display': {
     fontFamily: '"Effra Regular", Arial',
@@ -218,7 +228,7 @@ const typographyStyles = {
     lineHeight: '14px',
     letterSpacing: 1.2
   },
-  underline: { 'text-decoration': 'underline' }
+  underline: { textDecoration: 'underline' }
 }
 
 const displayStyles = {
@@ -340,11 +350,32 @@ const borderRadiusStyles = {
 }
 
 const borderStyles = {
+  'border-collapse': { borderCollapse: 'collapse' },
   border: { borderStyle: 'solid', borderWidth: '1px' },
   'border-0': { borderStyle: 'solid', borderWidth: '0px' },
   'border-2': { borderStyle: 'solid', borderWidth: '2px' },
   'border-4': { borderStyle: 'solid', borderWidth: '4px' },
-  'border-8': { borderStyle: 'solid', borderWidth: '8px' }
+  'border-8': { borderStyle: 'solid', borderWidth: '8px' },
+  'border-t': { borderStyle: 'solid', borderTopWidth: '1px' },
+  'border-t-0': { borderStyle: 'solid', borderTopWidth: '0px' },
+  'border-t-2': { borderStyle: 'solid', borderTopWidth: '2px' },
+  'border-t-4': { borderStyle: 'solid', borderTopWidth: '4px' },
+  'border-t-8': { borderStyle: 'solid', borderTopWidth: '8px' },
+  'border-r': { borderStyle: 'solid', borderRightWidth: '1px' },
+  'border-r-0': { borderStyle: 'solid', borderRightWidth: '0px' },
+  'border-r-2': { borderStyle: 'solid', borderRightWidth: '2px' },
+  'border-r-4': { borderStyle: 'solid', borderRightWidth: '4px' },
+  'border-r-8': { borderStyle: 'solid', borderRightWidth: '8px' },
+  'border-b': { borderStyle: 'solid', borderBottomWidth: '1px' },
+  'border-b-0': { borderStyle: 'solid', borderBottomWidth: '0px' },
+  'border-b-2': { borderStyle: 'solid', borderBottomWidth: '2px' },
+  'border-b-4': { borderStyle: 'solid', borderBottomWidth: '4px' },
+  'border-b-8': { borderStyle: 'solid', borderBottomWidth: '8px' },
+  'border-l': { borderStyle: 'solid', borderLeftWidth: '1px' },
+  'border-l-0': { borderStyle: 'solid', borderLeftWidth: '0px' },
+  'border-l-2': { borderStyle: 'solid', borderLeftWidth: '2px' },
+  'border-l-4': { borderStyle: 'solid', borderLeftWidth: '4px' },
+  'border-l-8': { borderStyle: 'solid', borderLeftWidth: '8px' }
 }
 
 const borderColorStyles = {
@@ -394,6 +425,7 @@ const supportedTailwindClasses = {
   ...fontStyleStyles,
   ...fontSizeStyles,
   ...fontWeightStyles,
+  ...textAlignStyles,
   ...lineHeight,
   ...listStyles,
   ...typographyStyles,

@@ -14,12 +14,6 @@ body {
   margin-bottom: 24px;
 }
 
-.card {
-  background: #fff;
-  margin: 0 0 20px;
-  padding: 40px;
-}
-
 .text {
   font-family: 'Source Sans Pro', Arial;
   display: block;
