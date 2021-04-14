@@ -8,7 +8,7 @@
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.5",
-    "browser-sync": "^2.26.13",
+    "browser-sync": "^2.26.14",
     "nodemon": "^2.0.6"
   },
   "dependencies": {
