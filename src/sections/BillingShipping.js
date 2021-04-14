@@ -21,28 +21,28 @@ export const BillingShipping = ({ style, orderNumber, orderDate }) => {
       <Heading level='3' style={styles.heading}>
         Your Order #000014011
       </Heading>
-      <Text style={styles.subheading}>Placed on Mar 17, 2021, 8:45:35 AM</Text>
+      <Text style={styles.subheading}>
+        Placed on Mar 17, 2021, 8:45:35 AM EST
+      </Text>
       <Grid>
         <Row>
           <Box span='4'>
             <Heading level='4' style={styles.sectionHeading}>
-              Billing
+              Billing info
             </Heading>
             <Text style={styles.text}>Vera Bruklich</Text>
             <Text style={styles.text}>27 Longhill Rd</Text>
             <Text style={styles.text}>Ashland, MA 01721-2426</Text>
             <Text style={styles.text}>United States</Text>
-            <Text style={styles.text}>T: 5082156150</Text>
           </Box>
           <Box span='4'>
             <Heading level='4' style={styles.sectionHeading}>
-              Shipping
+              Shipping info
             </Heading>
             <Text style={styles.text}>Vera Bruklich</Text>
             <Text style={styles.text}>27 Longhill Rd</Text>
             <Text style={styles.text}>Ashland, MA 01721-2426</Text>
             <Text style={styles.text}>United States</Text>
-            <Text style={styles.text}>T: 5082156150</Text>
           </Box>
         </Row>
         <Row>

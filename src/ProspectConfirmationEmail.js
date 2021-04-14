@@ -42,7 +42,11 @@ function ProspectConfirmationEmail({ data }) {
           restaurantName="Monk's Cafe"
           items={[
             <Text style={styles.step}>
-              Complete restaurant setup, by logging in to your account.
+              Complete restaurant setup, by{' '}
+              <a style={styles.link} href='https://toasttab.com'>
+                logging in
+              </a>{' '}
+              to your account.
             </Text>,
             <Text style={styles.step}>
               Accept contract terms. <b>Hardware ships once accepted.</b>
