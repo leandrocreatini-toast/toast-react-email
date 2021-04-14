@@ -419,8 +419,7 @@ const supportedTailwindClasses = {
   ...lineHeight,
   ...listStyles,
   ...typographyStyles,
-  ...textColorStyles,
-  ...floatStyles
+  ...textColorStyles
 }
 
 export const fromTailwind = convertFromTailwind(supportedTailwindClasses)
