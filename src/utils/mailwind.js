@@ -395,21 +395,11 @@ const borderColorStyles = {
   'border-gray-900': { borderColor: 'rgba(17, 24, 39, 1)' }
 }
 
-const floatStyles = {
-  'float-right': { float: 'right' },
-  'float-left': { float: 'left' },
-  'float-none': { float: 'none' },
-  'clear-left': { clear: 'left' },
-  'clear-right': { clear: 'right' },
-  'clear-both': { clear: 'both' },
-  'clear-none': { clear: 'none' },
-  'clear-fix': { clear: 'both', display: 'table' }
-}
-
 const sizingStyles = {
   'w-full': { width: '100%' },
   'w-1/2': { width: '50%' },
   'h-full': { height: '100%' },
+  'mx-auto': { marginRight: 'auto', marginLeft: 'auto' },
   'mr-auto': { marginRight: 'auto' },
   'ml-auto': { marginLeft: 'auto' }
 }

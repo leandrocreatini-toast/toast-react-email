@@ -1,31 +1,40 @@
 // global
 import * as React from 'react'
+import { Box } from '../components/Box'
 // local
 import { Card } from '../components/Card'
 import { Grid } from '../components/Grid'
 import { Heading } from '../components/Heading'
 import { Image } from '../components/Image'
 import { ListItem } from '../components/ListItem'
+import { Row } from '../components/Row'
 import { fromTailwind } from '../utils/mailwind'
 
 const styles = fromTailwind({
-  head: 'clear-fix mb-4',
-  image: 'float-left mr-2',
-  heading: 'float-left mt-1 mb-1 font-normal'
+  head: 'mb-4',
+  imageBox: 'w-10',
+  image: 'mt-1 mr-2',
+  heading: 'mt-1 mb-1 font-normal'
 })
 
 export const PlanOverview = ({ planType, items }) => {
   return (
     <Card>
-      <div style={styles.head}>
-        <Image
-          style={styles.image}
-          src='https://d2w1ef2ao9g8r9.cloudfront.net/images/email-images/special-request.jpg'
-        />
-        <Heading level='3' style={styles.heading}>
-          Your plan: <b>{planType}</b>
-        </Heading>
-      </div>
+      <Grid style={styles.header}>
+        <Row>
+          <Box style={styles.imageBox}>
+            <Image
+              style={styles.image}
+              src='https://d2w1ef2ao9g8r9.cloudfront.net/images/email-images/special-request.jpg'
+            />
+          </Box>
+          <Box>
+            <Heading level='3' style={styles.heading}>
+              Your plan: <b>{planType}</b>
+            </Heading>
+          </Box>
+        </Row>
+      </Grid>
       <Grid>
         {items.map((item, idx) => (
           <ListItem secondary key={`detail-${idx}`}>
