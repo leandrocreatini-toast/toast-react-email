@@ -15,7 +15,7 @@
     "classnames": "^2.2.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-scripts": "4.0.0"
+    "react-scripts": "^4.0.3"
   },
   "scripts": {
     "build": "NODE_ENV=production babel src --out-dir .build && node internal/index.js",
