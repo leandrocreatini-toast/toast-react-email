@@ -2,7 +2,6 @@
 import React from 'react'
 // local
 import { fromTailwind } from './utils/mailwind'
-import { Image } from './components/Image'
 import { Layout } from './components/Layout'
 import { Text } from './components/Text'
 import { BillingShipping } from './sections/BillingShipping'
@@ -25,8 +24,6 @@ const styles = fromTailwind({
   questionCopy: 'type-default mt-2 mb-10',
   link: 'text-link'
 })
-
-console.log(styles)
 
 /* RENDER EMAIL */
 function ProspectConfirmationEmail({ data }) {
