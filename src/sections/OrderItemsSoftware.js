@@ -12,14 +12,14 @@ import { Text } from '../components/Text'
 const styles = fromTailwind({
   container: 'mb-12',
   table: 'border-collapse',
-  headingText: 'mt-1 mb-5 w-full',
-  text: 'mt-1 mb-3',
-  boldText: 'mt-1 mb-3 font-bold',
-  rightText: 'mt-1 mb-3 text-right',
+  headingText: 'type-headline-2 mt-0 mb-2',
+  text: 'type-default mt-0 mb-3',
+  textBold: 'type-default mt-0 mb-3 font-bold',
+  textPrice: 'type-default mt-0 mb-3 text-right',
   space: 'block h-8 w-full',
   totalsGroup: 'w-full',
-  detailsGroup: 'text-secondary mt-8 mb-16',
-  detail: 'text-sm leading-normal mb-2',
+  detailsGroup: 'mt-8 mb-16 pl-2',
+  detail: 'type-default text-secondary mb-2',
   link: 'text-link'
 })
 
@@ -72,12 +72,12 @@ export const OrderItemsSoftware = () => {
       {/* Subtotal & Total */}
       <Grid style={styles.totalsGroup}>
         <Row>
-          <Box span='3' />
-          <Box span='3'>
-            <Text style={styles.boldText}>Total</Text>
+          <Box span='4' />
+          <Box span='2'>
+            <Text style={styles.textBold}>Total</Text>
           </Box>
           <Box span='2'>
-            <Text style={styles.rightText}>$294/month</Text>
+            <Text style={styles.textPrice}>$294/month</Text>
           </Box>
         </Row>
       </Grid>

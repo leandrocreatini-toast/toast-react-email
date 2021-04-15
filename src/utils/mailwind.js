@@ -16,6 +16,7 @@ const spacingRulesMapping = {
 const sizingConfig = {
   baseSize: 4,
   sizes: [
+    0,
     1,
     2,
     3,
@@ -169,55 +170,68 @@ const typographyStyles = {
     letterSpacing: 'normal'
   },
   'type-headline-1': {
-    fontFamily: '"Effra Regular", Arial',
-    fontSize: '50px',
-    lineHeight: '50px',
-    letterSpacing: 'normal'
+    fontFamily: '"Effra Medium", Arial',
+    fontSize: '35px',
+    lineHeight: '35px',
+    letterSpacing: 'normal',
+    color: '#1C1C1C',
+    margin: '0'
   },
   'type-headline-2': {
-    fontFamily: '"Effra Regular", Arial',
-    fontSize: '38px',
-    lineHeight: '42px',
-    letterSpacing: 'normal'
+    fontFamily: '"Effra Medium", Arial',
+    fontSize: '18px',
+    lineHeight: '32px',
+    letterSpacing: 'normal',
+    color: '#080809',
+    margin: '0'
   },
   'type-headline-3': {
-    fontFamily: '"Effra Regular", Arial',
-    fontSize: '30px',
-    lineHeight: '34px',
-    letterSpacing: 'normal'
+    fontFamily: '"Effra Medium", Arial',
+    fontSize: '15px',
+    lineHeight: '15px',
+    letterSpacing: 'normal',
+    color: '#080809',
+    margin: '0'
   },
   'type-headline-4': {
-    fontFamily: '"Effra Regular", Arial',
-    fontSize: '26px',
-    lineHeight: '30px',
-    letterSpacing: 'normal'
+    fontFamily: '"Effra Medium", Arial',
+    fontSize: '14px',
+    lineHeight: '24px',
+    letterSpacing: 'normal',
+    color: '#080809',
+    margin: '0'
   },
   'type-headline-5': {
-    fontFamily: '"Source Sans Pro", Arial',
-    fontSize: '22px',
-    lineHeight: '26px',
-    letterSpacing: 'normal'
+    fontFamily: '"Effra Medium", Arial',
+    fontSize: '12px',
+    lineHeight: '16px',
+    letterSpacing: 'normal',
+    color: '#080809',
+    margin: '0'
   },
   'type-default': {
     fontFamily: '"Source Sans Pro", Arial',
-    fontSize: '20px',
-    lineHeight: '24px',
-    letterSpacing: 0.2
+    fontSize: '12px',
+    lineHeight: '16px',
+    letterSpacing: 0.2,
+    color: '#080809',
+    margin: '0'
   },
   'type-small': {
     fontFamily: '"Source Sans Pro", Arial',
-    fontSize: '17px',
-    lineHeight: '24px',
+    fontSize: '9px',
+    lineHeight: '16px',
     letterSpacing: 0.2
   },
   'type-subhead': {
     fontFamily: '"Source Sans Pro", Arial',
     fontSize: '15px',
-    lineHeight: '17px',
-    letterSpacing: 0.5
+    lineHeight: '15px',
+    letterSpacing: 0.5,
+    color: '#1C1C1C'
   },
   'type-caption': {
-    fontFamily: '"Effra Regular", Arial',
+    fontFamily: '"Effra Medium", Arial',
     fontSize: '13px',
     lineHeight: '15px',
     letterSpacing: 0.4

@@ -9,14 +9,15 @@ import { FullRow } from '../components/Row'
 import { Text } from '../components/Text'
 
 const styles = fromTailwind({
-  heading: 'type-headline-1',
-  subtext: 'type-overline text-gray-75 mb-8'
+  logo: 'mb-12',
+  heading: 'type-headline-1 mb-6',
+  subtext: 'type-default text-secondary'
 })
 
 export const Head = ({ style, heading, text }) => {
   return (
     <Grid style={style}>
-      <ToastLogo />
+      <ToastLogo style={styles.logo} />
       <FullRow>
         <Heading level='1' style={styles.heading}>
           {heading}

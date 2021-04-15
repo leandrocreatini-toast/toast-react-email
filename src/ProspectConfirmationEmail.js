@@ -16,13 +16,14 @@ import { PlanOverview } from './sections/PlanOverview'
 const styles = fromTailwind({
   head: 'mb-6',
   pageWrap: 'p-12 bg-white',
-  step: 'block clear-fix',
-  planDetail: 'block clear-fix text-secondary',
-  billing: 'mt-16 mb-16',
-  hardwareItems: 'mt-16 mb-16',
-  softwareItems: 'mt-16 mb-16',
+  nextSteps: 'mb-16',
+  step: 'type-default mt-0 mb-2',
+  planDetail: 'type-default mt-0 mb-2 text-secondary',
+  billing: 'mb-16',
+  hardwareItems: 'mb-16',
+  softwareItems: 'mb-16',
   illustration: 'w-full',
-  questionCopy: 'text-small text-secondary',
+  questionCopy: 'type-default text-secondary mt-2 mb-10',
   link: 'text-link',
   footer: 'mt-8'
 })
@@ -39,6 +40,7 @@ function ProspectConfirmationEmail({ data }) {
         />
 
         <NextSteps
+          style={styles.nextSteps}
           restaurantName="Monk's Cafe"
           items={[
             <Text style={styles.step}>

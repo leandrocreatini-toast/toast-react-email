@@ -9,11 +9,11 @@ import { fromTailwind } from '../utils/mailwind'
 
 const styles = fromTailwind({
   row: 'border-t-2 border-gray-200 border-r-0 border-b-0 border-l-0',
-  text: 'font-medium',
-  price: 'font-medium text-right'
+  text: 'type-default mt-2 mb-2',
+  price: 'type-default text-right mt-2 mb-2'
 })
 
-export const ItemLine = ({ name, quantity, price, term }) => (
+export const ItemLine = ({ name, quantity, price }) => (
   <Row style={styles.row}>
     <Box span='4'>
       <Text style={styles.text}>{name}</Text>

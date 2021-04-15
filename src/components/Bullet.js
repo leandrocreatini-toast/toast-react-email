@@ -1,13 +1,8 @@
 // global
 import React from 'react'
 
-// inline-styles
-const bulletStyles = {
-  display: 'inline-block'
-}
-
-export const Bullet = ({ children, className, ...rest }) => (
-  <span className='bullet' style={bulletStyles} {...rest}>
+export const Bullet = ({ children, style, ...rest }) => (
+  <span className='bullet' style={style} {...rest}>
     {children}
   </span>
 )

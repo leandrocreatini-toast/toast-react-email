@@ -7,16 +7,17 @@ import { Bullet } from './Bullet'
 import { Row } from './Row'
 
 const styles = fromTailwind({
-  bulletBox: 'w-4',
-  bullet: 'w-2 h-2',
-  bulletSecondary: 'w-2 h-2 bg-gray-75',
+  container: '',
+  bulletBox: 'w-4 h-6',
+  bullet: 'w-2 h-2 m-2',
+  bulletSecondary: 'w-2 h-2 m-2 bg-gray-75',
   itemBox: 'w-full',
-  item: 'ml-1 inline-block'
+  item: 'mt-1 mb-2 ml-1 inline-block'
 })
 
 export const ListItem = ({ secondary, children }) => {
   return (
-    <Row>
+    <Row style={styles.container}>
       <Box style={styles.bulletBox}>
         <Bullet style={secondary ? styles.bulletSecondary : styles.bullet} />
       </Box>

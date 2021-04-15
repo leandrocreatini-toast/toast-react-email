@@ -4,9 +4,9 @@ import React from 'react'
 import { fromTailwind } from '../utils/mailwind'
 
 const styles = fromTailwind({
-  container: 'border-2 border-gray-200 rounded-lg p-6'
+  container: 'border-2 border-gray-200 rounded-lg p-4'
 })
 
-export const Card = ({ children }) => (
-  <div style={styles.container}>{children}</div>
+export const Card = ({ style, children }) => (
+  <div style={{ ...styles.container, ...style }}>{children}</div>
 )

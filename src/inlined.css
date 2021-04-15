@@ -3,93 +3,6 @@ body {
   font-family: 'Source Sans Pro', Arial;
 }
 
-.grid {
-  margin: 0 !important;
-  padding: 0 !important;
-  border-collapse: separate;
-  width: 100%;
-}
-
-.row {
-  margin-bottom: 24px;
-}
-
-.text {
-  font-family: 'Source Sans Pro', Arial;
-  display: block;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.3px;
-  text-align: left;
-  color: #252525;
-  margin: 0 0 8px;
-}
-
-.h1 {
-  font-family: 'Effra Medium', Arial;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 42px;
-  letter-spacing: normal;
-  text-align: left;
-  color: #252525;
-  margin: 0 0 24px;
-}
-
-.h2 {
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 1.17;
-  letter-spacing: 0.4px;
-  color: #252525;
-  margin: 0 0 24px;
-}
-
-.h3 {
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1.4;
-  letter-spacing: normal;
-  color: #252525;
-  margin: 0 0 24px;
-}
-
-.h4 {
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 1.25;
-  letter-spacing: 0.3px;
-  color: #252525;
-  margin: 0 0 12px;
-}
-
-.microcopy {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.5px;
-  color: #666666;
-  margin: 0 0 8px;
-}
-
-.secondary {
-  color: #525252;
-}
-
-.inline {
-  display: inline;
-}
-
-.inline-block {
-  display: inline-block;
-}
-
-.link {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.5px;
-  color: #2b4fb9;
-}
-
 .bullet {
   display: inline-block;
   background: #ff4c00;
@@ -97,21 +10,6 @@ body {
   width: 8px;
   height: 8px;
   line-height: 8px;
-  margin: 20px 16px;
-}
-
-.circle {
-  display: inline-block;
-  background: #2b4fb9;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  padding: 7px;
 }
 
 hr,
@@ -125,7 +23,6 @@ hr,
 .layout {
   width: 400px;
 }
-
 .span-1 {
   width: 50px;
 }
@@ -149,51 +46,6 @@ hr,
 }
 .span-8 {
   width: 400px;
-}
-.text-left {
-  text-align: left;
-}
-.text-center {
-  text-align: center;
-}
-.text-right {
-  text-align: right;
-}
-.text-sm {
-  font-size: 14px;
-}
-.m-0 {
-  margin: 0;
-}
-.mt-2 {
-  margin-top: 8px;
-}
-.mt-4 {
-  margin-top: 16px;
-}
-.mb-2 {
-  margin-bottom: 8px;
-}
-.mb-4 {
-  margin-bottom: 16px;
-}
-.mb-6 {
-  margin-bottom: 24px;
-}
-.mb-8 {
-  margin-bottom: 32px;
-}
-.mb-10 {
-  margin-bottom: 40px;
-}
-.mb-12 {
-  margin-bottom: 48px;
-}
-.pb-4 {
-  margin-bottom: 16px;
-}
-.mr-4 {
-  margin-right: 16px;
 }
 
 @media (min-width: 640px) {
@@ -224,10 +76,4 @@ hr,
   .span-8 {
     width: 600px;
   }
-}
-
-.clearfix::after {
-  content: '';
-  clear: both;
-  display: table;
 }

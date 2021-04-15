@@ -12,14 +12,15 @@ import { fromTailwind } from '../utils/mailwind'
 
 const styles = fromTailwind({
   header: 'mb-4',
-  imageBox: 'w-10',
-  image: 'mt-1 mr-2',
-  heading: 'mt-1 mb-1'
+  imageBox: 'w-8',
+  image: 'w-6 h-6 mt-0',
+  heading: 'type-headline-3 mt-0 mb-0',
+  itemsGroup: { marginBottom: '-8px' }
 })
 
-export const NextSteps = ({ restaurantName, items }) => {
+export const NextSteps = ({ style, restaurantName, items }) => {
   return (
-    <Card>
+    <Card style={style}>
       <Grid style={styles.header}>
         <Row>
           <Box style={styles.imageBox}>
@@ -35,7 +36,7 @@ export const NextSteps = ({ restaurantName, items }) => {
           </Box>
         </Row>
       </Grid>
-      <Grid>
+      <Grid style={styles.itemsGroup}>
         {items.map((item, idx) => (
           <ListItem key={`step-${idx}`}>{item}</ListItem>
         ))}

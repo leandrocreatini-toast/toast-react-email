@@ -13,7 +13,7 @@ import { Row } from '../components/Row'
 const styles = fromTailwind({
   companyInfoGroup: 'w-full mb-8',
   copyrightGroup: '',
-  copyright: 'type-small text-xs mt-1 mb-2',
+  copyright: 'type-small mt-1 mb-2',
   socialIconGroup: 'mt-2',
   socialIcon: 'h-8 ml-2',
   logo: 'mt-12 mb-20'

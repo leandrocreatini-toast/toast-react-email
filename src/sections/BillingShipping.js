@@ -9,13 +9,15 @@ import { Row } from '../components/Row'
 import { Box } from '../components/Box'
 
 const styles = fromTailwind({
-  heading: 'type-headline-4 mb-2',
-  subheading: 'type-headline-5 text-base mt-1',
-  sectionHeading: 'type-default mb-3',
-  text: 'type-small text-base text-gray-75 leading-none mt-1 mb-2'
+  heading: 'type-headline-2',
+  subheading: 'type-headline-5',
+  addressInfo: 'mt-6',
+  methodInfo: 'mt-4',
+  sectionHeading: 'type-headline-4 mt-1 mb-2',
+  text: 'type-default text-gray-75 leading-none mt-1 mb-2'
 })
 
-export const BillingShipping = ({ style, orderNumber, orderDate }) => {
+export const BillingShipping = ({ style }) => {
   return (
     <div style={style}>
       <Heading level='3' style={styles.heading}>
@@ -24,11 +26,11 @@ export const BillingShipping = ({ style, orderNumber, orderDate }) => {
       <Text style={styles.subheading}>
         Placed on Mar 17, 2021, 8:45:35 AM EST
       </Text>
-      <Grid>
+      <Grid style={styles.addressInfo}>
         <Row>
           <Box span='4'>
             <Heading level='4' style={styles.sectionHeading}>
-              Billing info
+              Billing Info
             </Heading>
             <Text style={styles.text}>Vera Bruklich</Text>
             <Text style={styles.text}>27 Longhill Rd</Text>
@@ -37,7 +39,7 @@ export const BillingShipping = ({ style, orderNumber, orderDate }) => {
           </Box>
           <Box span='4'>
             <Heading level='4' style={styles.sectionHeading}>
-              Shipping info
+              Shipping Info
             </Heading>
             <Text style={styles.text}>Vera Bruklich</Text>
             <Text style={styles.text}>27 Longhill Rd</Text>
@@ -45,6 +47,8 @@ export const BillingShipping = ({ style, orderNumber, orderDate }) => {
             <Text style={styles.text}>United States</Text>
           </Box>
         </Row>
+      </Grid>
+      <Grid style={styles.methodInfo}>
         <Row>
           <Box span='4'>
             <Heading level='4' style={styles.sectionHeading}>

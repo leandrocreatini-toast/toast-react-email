@@ -12,10 +12,10 @@ import { Text } from '../components/Text'
 const styles = fromTailwind({
   container: 'mb-12',
   table: 'border-collapse',
-  headingText: 'mt-1 mb-5',
-  text: 'mt-1 mb-3',
-  boldText: 'mt-1 mb-3 font-bold',
-  rightText: 'mt-1 mb-3 text-right',
+  headingText: 'type-headline-2 mt-0 mb-2',
+  text: 'type-default mt-0 mb-3',
+  textBold: 'type-default mt-0 mb-3 font-bold',
+  textPrice: 'type-default mt-0 mb-3 text-right',
   space: 'block h-8 w-full',
   totalsGroup: 'w-full'
 })
@@ -26,7 +26,7 @@ export const OrderItemsHardware = ({ style }) => {
       {/* HARDWARE + INSTALLATION ITEMS */}
       <Grid style={styles.table}>
         {/* Heading */}
-        <Row style={styles.headingGroup}>
+        <Row>
           <Box span='4'>
             <Heading level='3' style={styles.headingText}>
               Items
@@ -61,30 +61,30 @@ export const OrderItemsHardware = ({ style }) => {
       {/* Subtotal & Total */}
       <Grid style={styles.totalsGroup}>
         <Row>
-          <Box span='3' />
-          <Box span='3'>
+          <Box span='4' />
+          <Box span='2'>
             <Text style={styles.text}>Subtotal</Text>
           </Box>
           <Box span='2'>
-            <Text style={styles.rightText}>$2,446.00</Text>
+            <Text style={styles.textPrice}>$2,446.00</Text>
           </Box>
         </Row>
         <Row>
-          <Box span='3' />
-          <Box span='3'>
+          <Box span='4' />
+          <Box span='2'>
             <Text style={styles.text}>Shipping & Handling</Text>
           </Box>
           <Box span='2'>
-            <Text style={styles.rightText}>$36.12</Text>
+            <Text style={styles.textPrice}>$36.12</Text>
           </Box>
         </Row>
         <Row>
-          <Box span='2' />
-          <Box span='3'>
-            <Text style={styles.boldText}>Grand Total</Text>
+          <Box span='4' />
+          <Box span='2'>
+            <Text style={styles.textBold}>Grand Total</Text>
           </Box>
           <Box span='2'>
-            <Text style={styles.rightText}>$2,482.12</Text>
+            <Text style={styles.textPrice}>$2,482.12</Text>
           </Box>
         </Row>
       </Grid>
