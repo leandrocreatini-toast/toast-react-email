@@ -18,11 +18,11 @@ const styles = fromTailwind({
   pageWrap: 'p-12 bg-white',
   nextSteps: 'mb-16',
   step: 'type-default mt-0 mb-2',
-  planDetail: 'type-default mt-0 mb-2 text-secondary',
+  planDetail: 'type-default mt-0 mb-2',
   billing: 'mb-16',
   hardwareItems: 'mb-16',
   softwareItems: 'mb-16',
-  questionCopy: 'type-default text-secondary mt-2 mb-10',
+  questionCopy: 'type-default mt-2 mb-10',
   link: 'text-link'
 })
 

@@ -11,7 +11,7 @@ import { Text } from '../components/Text'
 const styles = fromTailwind({
   logo: 'mb-12',
   heading: 'type-headline-1 mb-6',
-  subtext: 'type-default text-secondary'
+  subtext: 'type-default text-gray-60'
 })
 
 export const Head = ({ style, heading, text }) => {

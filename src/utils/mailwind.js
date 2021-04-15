@@ -214,14 +214,15 @@ const typographyStyles = {
     fontSize: '12px',
     lineHeight: '16px',
     letterSpacing: 0.2,
-    color: '#080809',
+    color: '#525252',
     margin: '0'
   },
   'type-small': {
     fontFamily: '"Source Sans Pro", Arial',
     fontSize: '9px',
     lineHeight: '16px',
-    letterSpacing: 0.2
+    letterSpacing: 0.2,
+    color: '#525252'
   },
   'type-subhead': {
     fontFamily: '"Source Sans Pro", Arial',
@@ -281,11 +282,14 @@ const textColorStyles = {
   'text-success': { color: '#006400' },
   'text-neutral': { color: '#001b59' },
   // Gray
+  'text-gray-150': { color: '#080809' },
   'text-gray-125': { color: '#252525' },
   'text-gray-110': { color: '#474747' },
   'text-gray-100': { color: '#666666' },
   'text-gray-75': { color: '#7A7A7A' },
+  'text-gray-60': { color: '#525252' },
   'text-gray-50': { color: '#C0C0C0' },
+  'text-gray-40': { color: '#A9A9A9' },
   'text-gray-30': { color: '#e5e5e5' },
   'text-gray-25': { color: '#f0f0f0' },
   'text-gray-0': { color: '#f7f7f7' },

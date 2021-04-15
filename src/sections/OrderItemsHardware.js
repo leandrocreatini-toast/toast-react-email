@@ -13,9 +13,9 @@ const styles = fromTailwind({
   container: 'mb-12',
   table: 'border-collapse',
   headingText: 'type-headline-2 mt-0 mb-2',
-  text: 'type-default mt-0 mb-3',
-  textBold: 'type-default mt-0 mb-3 font-bold',
-  textPrice: 'type-default mt-0 mb-3 text-right',
+  text: 'type-default text-gray-150 mt-0 mb-3',
+  textBold: 'type-default text-gray-150 mt-0 mb-3 font-bold',
+  textPrice: 'type-default text-gray-150 mt-0 mb-3 text-right',
   space: 'block h-6 w-full',
   totalsGroup: 'w-full'
 })

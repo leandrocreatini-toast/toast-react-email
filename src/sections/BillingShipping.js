@@ -14,7 +14,7 @@ const styles = fromTailwind({
   addressInfo: 'mt-6',
   methodInfo: 'mt-4',
   sectionHeading: 'type-headline-4 mt-1 mb-2',
-  text: 'type-default text-gray-75 leading-none mt-1 mb-2'
+  text: 'type-default text-gray-60 leading-none mt-1 mb-2'
 })
 
 export const BillingShipping = ({ style }) => {

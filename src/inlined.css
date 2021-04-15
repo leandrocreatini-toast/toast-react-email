@@ -1,3 +1,33 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: local('Source Sans Pro'),
+    url('https://cdn.toasttab.com/static/273e44f3c591cc61089c4bb7fd21bdd0a6c7c965/fonts/SourceSansPro-Regular.ttf')
+      format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: local('Source Sans Pro'),
+    url('https://cdn.toasttab.com/static/273e44f3c591cc61089c4bb7fd21bdd0a6c7c965/fonts/SourceSansPro-Bold.ttf')
+      format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Effra';
+  src: local('Effra'),
+    url('https://cdn.toasttab.com/static/273e44f3c591cc61089c4bb7fd21bdd0a6c7c965/fonts/Effra-StdRg.ttf')
+      format('truetype');
+}
+
+@font-face {
+  font-family: 'Effra Medium';
+  src: local('Effra Medium'),
+    url('https://cdn.toasttab.com/static/273e44f3c591cc61089c4bb7fd21bdd0a6c7c965/fonts/Effra-Medium.ttf')
+      format('truetype');
+  font-weight: 500;
+}
+
 body {
   background: #f7f7f7;
   font-family: 'Source Sans Pro', Arial;
