@@ -9,8 +9,8 @@ import { fromTailwind } from '../utils/mailwind'
 
 const styles = fromTailwind({
   row: 'border-t-2 border-gray-200 border-r-0 border-b-0 border-l-0',
-  text: 'type-default mt-2 mb-2',
-  price: 'type-default text-right mt-2 mb-2'
+  text: 'type-headline-5 mt-2 mb-2',
+  price: 'type-headline-5 text-right mt-2 mb-2'
 })
 
 export const ItemLineSoftware = ({ name, quantity, price, term }) => (

@@ -4,7 +4,7 @@ import { Text } from '../components/Text'
 import { fromTailwind } from '../utils/mailwind'
 
 const styles = fromTailwind({
-  legalCopy: 'type-small text-secondary mb-4',
+  legalCopy: 'type-small text-secondary mt-0 mb-2',
   legalCopyUnderlined: 'type-small text-secondary underline'
 })
 

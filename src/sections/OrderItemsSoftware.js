@@ -16,10 +16,10 @@ const styles = fromTailwind({
   text: 'type-default mt-0 mb-3',
   textBold: 'type-default mt-0 mb-3 font-bold',
   textPrice: 'type-default mt-0 mb-3 text-right',
-  space: 'block h-8 w-full',
+  space: 'block h-6 w-full',
   totalsGroup: 'w-full',
-  detailsGroup: 'mt-8 mb-16 pl-2',
-  detail: 'type-default text-secondary mb-2',
+  detailsGroup: 'mt-8 mb-16 pl-4',
+  detail: 'type-small text-secondary mb-2',
   link: 'text-link'
 })
 

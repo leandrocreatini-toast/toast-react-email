@@ -28,6 +28,8 @@ const styles = fromTailwind({
   footer: 'mt-8'
 })
 
+console.log(styles)
+
 /* RENDER EMAIL */
 function ProspectConfirmationEmail({ data }) {
   return (
