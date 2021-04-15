@@ -18,14 +18,14 @@ const styles = fromTailwind({
   textPrice: 'type-default text-gray-150 mt-0 mb-3 text-right',
   space: 'block h-6 w-full',
   totalsGroup: 'w-full',
-  detailsGroup: 'mt-8 mb-16 pl-4',
+  detailsGroup: 'mt-8 mb-0 pl-4',
   detail: 'type-small mb-2',
   link: 'text-link'
 })
 
-export const OrderItemsSoftware = () => {
+export const OrderItemsSoftware = ({ style }) => {
   return (
-    <div style={styles.container}>
+    <div style={style}>
       {/* SOFTWARE */}
       <Grid style={styles.table}>
         {/* Heading */}
@@ -60,7 +60,7 @@ export const OrderItemsSoftware = () => {
         />
         <ItemLineSoftware
           name='Toast Go subscription'
-          quantity='1'
+          quantity='2'
           price='100'
         />
         <ItemLineSoftware name='Loyalty subscription' quantity='1' price='50' />

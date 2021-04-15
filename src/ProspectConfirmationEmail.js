@@ -14,19 +14,15 @@ import { PlanOverview } from './sections/PlanOverview'
 
 const styles = fromTailwind({
   head: 'mb-6',
-  pageWrap: 'p-12 bg-white',
-  nextSteps: 'mb-16',
-  step: 'type-default mt-0 mb-2',
-  planDetail: 'type-default mt-0 mb-2',
-  billing: 'mb-16',
-  hardwareItems: 'mb-16',
-  softwareItems: 'mb-16',
-  questionCopy: 'type-default mt-2 mb-10',
+  pageWrap: 'p-12 pb-22 bg-white',
+  section: 'mb-16',
+  listItem: 'type-default mt-0 mb-2',
+  questionCopy: 'type-default mt-2',
   link: 'text-link'
 })
 
 /* RENDER EMAIL */
-function ProspectConfirmationEmail({ data }) {
+function ProspectConfirmationEmail() {
   return (
     <Layout>
       <div style={styles.pageWrap}>
@@ -37,38 +33,38 @@ function ProspectConfirmationEmail({ data }) {
         />
 
         <NextSteps
-          style={styles.nextSteps}
+          style={styles.section}
           restaurantName="Monk's Cafe"
           items={[
-            <Text style={styles.step}>
+            <Text style={styles.listItem}>
               Complete restaurant setup, by{' '}
               <a style={styles.link} href='https://toasttab.com'>
                 logging in
               </a>{' '}
               to your account.
             </Text>,
-            <Text style={styles.step}>
+            <Text style={styles.listItem}>
               Accept contract terms. <b>Hardware ships once accepted.</b>
             </Text>,
-            <Text style={styles.step}>
+            <Text style={styles.listItem}>
               Set up hardware, and start enjoying Toast!
             </Text>
           ]}
         />
 
-        <BillingShipping style={styles.billing} />
+        <BillingShipping style={styles.section} />
 
-        <OrderItemsHardware style={styles.hardwareItems} />
+        <OrderItemsHardware style={styles.section} />
 
-        <OrderItemsSoftware />
+        <OrderItemsSoftware style={styles.section} />
 
         <PlanOverview
           planType='Pay as You Go pricing'
           items={[
-            <Text style={styles.planDetail}>
+            <Text style={styles.listItem}>
               Starter Kit and POS Software for $0 down.
             </Text>,
-            <Text style={styles.planDetail}>2.99%* + 15¢ per transaction.</Text>
+            <Text style={styles.listItem}>2.99%* + 15¢ per transaction.</Text>
           ]}
         />
 
