@@ -22,10 +22,8 @@ const styles = fromTailwind({
   billing: 'mb-16',
   hardwareItems: 'mb-16',
   softwareItems: 'mb-16',
-  illustration: 'w-full',
   questionCopy: 'type-default text-secondary mt-2 mb-10',
-  link: 'text-link',
-  footer: 'mt-8'
+  link: 'text-link'
 })
 
 console.log(styles)
@@ -84,12 +82,8 @@ function ProspectConfirmationEmail({ data }) {
           </a>
         </Text>
       </div>
-      <Image
-        style={styles.illustration}
-        src='https://d2w1ef2ao9g8r9.cloudfront.net/images/email-images/Illustration.jpg'
-      />
 
-      <Footer style={styles.footer} />
+      <Footer />
     </Layout>
   )
 }

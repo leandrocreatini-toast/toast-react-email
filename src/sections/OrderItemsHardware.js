@@ -34,7 +34,7 @@ export const OrderItemsHardware = ({ style }) => {
           </Box>
           <Box span='2'>
             <Heading level='3' style={styles.headingText}>
-              Quantity
+              Qty
             </Heading>
           </Box>
           <Box span='2'>

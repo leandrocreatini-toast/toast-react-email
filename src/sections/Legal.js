@@ -1,11 +1,13 @@
 import * as React from 'react'
+import { Image } from '../components/Image'
 // local
 import { Text } from '../components/Text'
 import { fromTailwind } from '../utils/mailwind'
 
 const styles = fromTailwind({
-  legalCopy: 'type-small text-secondary mt-0 mb-2',
-  legalCopyUnderlined: 'type-small text-secondary underline'
+  legalCopy: 'type-small text-gray-75 mt-0 mb-2',
+  legalCopyUnderlined: 'type-small text-gray-75 underline',
+  creditCards: 'mt-4 mb-6'
 })
 
 export const Legal = () => {
@@ -26,6 +28,9 @@ export const Legal = () => {
         Pricing applies to new customers and single locations only.
       </Text>
       <Text style={styles.legalCopy}>Payment methods we accept:</Text>
+
+      <Image style={styles.creditCards} src='' />
+
       <Text style={styles.legalCopyUnderlined}>Returns and refunds</Text>
       <Text style={styles.legalCopy}>
         Pricing Conditions: Toast pricing for VISA, MasterCard and Discover

@@ -35,13 +35,18 @@ export const OrderItemsSoftware = () => {
               Upcoming Software Charges
             </Heading>
           </Box>
-          <Box span='2' />
+          <Box span='2'>
+            <Heading level='3' style={styles.headingText}>
+              Qty
+            </Heading>
+          </Box>
           <Box span='2'>
             <Heading level='3' style={styles.headingText} align='right'>
               Rate
             </Heading>
           </Box>
         </Row>
+
         {/* Rows of Ordered Items */}
         <ItemLineSoftware
           name='Core Software Subscription'
@@ -64,11 +69,13 @@ export const OrderItemsSoftware = () => {
           quantity='1'
           price='50'
         />
+
         {/* Space */}
         <FullRow>
           <span style={styles.space} />
         </FullRow>
       </Grid>
+
       {/* Subtotal & Total */}
       <Grid style={styles.totalsGroup}>
         <Row>

@@ -14,7 +14,7 @@ const styles = fromTailwind({
   header: 'mb-4',
   imageBox: 'w-8',
   image: 'w-6 h-6 mt-0',
-  heading: 'type-headline-3 mt-0 mb-0',
+  heading: 'type-headline-3 mt-1 mb-0',
   itemsGroup: { marginBottom: '-8px' }
 })
 
