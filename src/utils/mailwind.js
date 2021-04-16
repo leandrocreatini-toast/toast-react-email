@@ -415,8 +415,10 @@ const borderColorStyles = {
 
 const sizingStyles = {
   'w-full': { width: '100%' },
+  'w-2-1/2': { width: '6px' },
   'w-1/2': { width: '50%' },
   'h-full': { height: '100%' },
+  'h-2-1/2': { height: '6px' },
   'mx-auto': { marginRight: 'auto', marginLeft: 'auto' },
   'mr-auto': { marginRight: 'auto' },
   'ml-auto': { marginLeft: 'auto' }

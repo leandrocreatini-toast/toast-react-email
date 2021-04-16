@@ -33,15 +33,6 @@ body {
   font-family: 'Source Sans Pro', Arial;
 }
 
-.bullet {
-  display: inline-block;
-  background: #ff4c00;
-  border-radius: 50%;
-  width: 8px;
-  height: 8px;
-  line-height: 8px;
-}
-
 hr,
 .divider {
   border: none;
