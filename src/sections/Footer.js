@@ -3,6 +3,7 @@ import * as React from 'react'
 // local
 import { ToastLogo } from '../components/ToastLogo'
 import { Image } from '../components/Image'
+import { ImageLink } from '../components/ImageLink'
 import { Text } from '../components/Text'
 import { Legal } from '../sections/Legal'
 import { fromTailwind } from '../utils/mailwind'
@@ -17,7 +18,7 @@ const styles = fromTailwind({
   copyright: 'type-small mt-0 mb-2',
   address: 'type-small mt-0 mb-0',
   socialIconGroup: 'mt-2',
-  socialIcon: 'h-8 ml-2',
+  socialIcon: 'h-5 ml-2',
   logo: 'mb-14'
 })
 
@@ -44,21 +45,25 @@ export const Footer = ({ style }) => {
             valign='bottom'
             align='right'
           >
-            <Image
+            <ImageLink
+              href='https://toasttab.com'
               style={styles.socialIcon}
-              src='https://d2w1ef2ao9g8r9.cloudfront.net/images/email-images/linkedin.jpg'
+              src='https://d2w1ef2ao9g8r9.cloudfront.net/images/email-images/linkedin.png?mtime=20210415162152&focal=none'
             />
-            <Image
+            <ImageLink
+              href='https://toasttab.com'
               style={styles.socialIcon}
-              src='https://d2w1ef2ao9g8r9.cloudfront.net/images/email-images/facebook.jpg'
+              src='https://d2w1ef2ao9g8r9.cloudfront.net/images/email-images/facebook.png?mtime=20210415162152&focal=none'
             />
-            <Image
+            <ImageLink
+              href='https://toasttab.com'
               style={styles.socialIcon}
-              src='https://d2w1ef2ao9g8r9.cloudfront.net/images/email-images/twitter.jpg'
+              src='https://d2w1ef2ao9g8r9.cloudfront.net/images/email-images/twitter.png?mtime=20210415162152&focal=none'
             />
-            <Image
+            <ImageLink
+              href='https://toasttab.com'
               style={styles.socialIcon}
-              src='https://d2w1ef2ao9g8r9.cloudfront.net/images/email-images/instagram-icon.jpg'
+              src='https://d2w1ef2ao9g8r9.cloudfront.net/images/email-images/instagram.png?mtime=20210415162152&focal=none'
             />
           </Box>
         </Row>

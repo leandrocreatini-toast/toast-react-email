@@ -7,7 +7,7 @@ import { fromTailwind } from '../utils/mailwind'
 const styles = fromTailwind({
   legalCopy: 'type-small text-gray-40 mt-0 mb-2',
   legalCopyUnderlined: 'type-small text-gray-40 underline',
-  creditCards: 'mt-4 mb-6'
+  creditCards: 'mt-4 mb-6 h-5'
 })
 
 export const Legal = () => {
@@ -29,7 +29,10 @@ export const Legal = () => {
       </Text>
       <Text style={styles.legalCopy}>Payment methods we accept:</Text>
 
-      <Image style={styles.creditCards} src='' />
+      <Image
+        style={styles.creditCards}
+        src='https://d2w1ef2ao9g8r9.cloudfront.net/images/email-images/credit-cards.png'
+      />
 
       <Text style={styles.legalCopyUnderlined}>Returns and refunds</Text>
       <Text style={styles.legalCopy}>

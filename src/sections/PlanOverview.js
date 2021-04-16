@@ -26,7 +26,7 @@ export const PlanOverview = ({ planType, items }) => {
           <Box style={styles.imageBox}>
             <Image
               style={styles.image}
-              src='https://d2w1ef2ao9g8r9.cloudfront.net/images/email-images/special-request.jpg'
+              src='https://d2w1ef2ao9g8r9.cloudfront.net/images/email-images/your-plan.png'
             />
           </Box>
           <Box>
