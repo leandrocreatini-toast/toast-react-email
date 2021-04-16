@@ -33,6 +33,16 @@ body {
   font-family: 'Source Sans Pro', Arial;
 }
 
+::selection {
+  color: #080809;
+  background: #ff4c00;
+}
+
+::selection {
+  color: #ffffff;
+  background: #002182;
+}
+
 hr,
 .divider {
   border: none;

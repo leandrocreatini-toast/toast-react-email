@@ -12,7 +12,7 @@ const styles = fromTailwind({
   bulletSecondary: {
     width: '4px',
     height: '4px',
-    margin: '10px 8px',
+    margin: '10px',
     background: '#525252'
   },
   itemBox: 'w-full',
