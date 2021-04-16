@@ -4,7 +4,14 @@ import React from 'react'
 import { fromTailwind } from '../utils/mailwind'
 
 const styles = fromTailwind({
-  bullet: 'w-2 h-2 m-2 bg-brand-50 inline-block rounded-full'
+  bullet: {
+    display: 'inline-block',
+    background: '#ff4c00',
+    borderRadius: '50%',
+    width: '6px',
+    height: '6px',
+    margin: '9px'
+  }
 })
 
 export const Bullet = ({ children, style, ...rest }) => (

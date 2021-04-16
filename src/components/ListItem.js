@@ -9,7 +9,12 @@ import { Row } from './Row'
 const styles = fromTailwind({
   container: '',
   bulletBox: 'w-4 h-6',
-  bulletSecondary: 'bg-gray-75',
+  bulletSecondary: {
+    width: '4px',
+    height: '4px',
+    margin: '10px 8px',
+    background: '#525252'
+  },
   itemBox: 'w-full',
   item: 'mt-1 mb-2 ml-1 inline-block'
 })
