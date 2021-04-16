@@ -55,7 +55,7 @@ function makeTailwindSizedClasses(mapping, config) {
         [inlineCssName]: `${size * config.baseSize}px`
       }
     })
-    return { ...acc, ...rules }
+    return blend(acc, rules)
   }, {})
 }
 
@@ -67,9 +67,11 @@ function convertFromTailwind(tailwindClasses) {
         typeof cssClassObject[className] === 'string'
           ? cssClassObject[className]
               .split(' ')
-              .reduce((acc, tailwindClass) => {
-                return { ...acc, ...tailwindClasses[tailwindClass] }
-              }, {})
+              .reduce(
+                (acc, tailwindClass) =>
+                  blend(acc, tailwindClasses[tailwindClass]),
+                {}
+              )
           : cssClassObject[className]
     })
     return output
@@ -163,12 +165,6 @@ const textAlignStyles = {
 }
 
 const typographyStyles = {
-  'type-display': {
-    fontFamily: '"Effra Regular", Arial',
-    fontSize: '68px',
-    lineHeight: '68px',
-    letterSpacing: 'normal'
-  },
   'type-headline-1': {
     fontFamily: '"Effra Medium", Arial',
     fontSize: '35px',
@@ -251,8 +247,6 @@ const displayStyles = {
   block: { display: 'block' },
   'inline-block': { display: 'inline-block' },
   inline: { display: 'inline' },
-  flex: { display: 'flex' },
-  'inline-flex': { display: 'inline-flex' },
   table: { display: 'table' },
   'table-caption': { display: 'table-caption' },
   'table-cell': { display: 'table-cell' },
@@ -262,9 +256,6 @@ const displayStyles = {
   'table-header-group': { display: 'table-header-group' },
   'table-row-group': { display: 'table-row-group' },
   'table-row': { display: 'table-row' },
-  'flow-root': { display: 'flow-root' },
-  grid: { display: 'grid' },
-  'inline-grid': { display: 'inline-grid' },
   contents: { display: 'contents' }
 }
 
@@ -424,22 +415,26 @@ const sizingStyles = {
   'ml-auto': { marginLeft: 'auto' }
 }
 
-const supportedTailwindClasses = {
-  ...spacingStyles,
-  ...sizingStyles,
-  ...backgroundColorStyles,
-  ...borderStyles,
-  ...borderRadiusStyles,
-  ...borderColorStyles,
-  ...displayStyles,
-  ...fontStyleStyles,
-  ...fontSizeStyles,
-  ...fontWeightStyles,
-  ...textAlignStyles,
-  ...lineHeight,
-  ...listStyles,
-  ...typographyStyles,
-  ...textColorStyles
-}
+const supportedTailwindClasses = blend(
+  spacingStyles,
+  sizingStyles,
+  backgroundColorStyles,
+  borderStyles,
+  borderRadiusStyles,
+  borderColorStyles,
+  displayStyles,
+  fontStyleStyles,
+  fontSizeStyles,
+  fontWeightStyles,
+  textAlignStyles,
+  lineHeight,
+  listStyles,
+  typographyStyles,
+  textColorStyles
+)
 
 export const fromTailwind = convertFromTailwind(supportedTailwindClasses)
+
+export function blend(...allStyles) {
+  return allStyles.reduce((acc, styles) => ({ ...acc, ...styles }), {})
+}

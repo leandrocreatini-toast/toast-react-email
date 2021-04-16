@@ -1,7 +1,7 @@
 // global
 import React from 'react'
 // local
-import { fromTailwind } from '../utils/mailwind'
+import { blend, fromTailwind } from '../utils/mailwind'
 
 const styles = fromTailwind({
   bullet: {
@@ -15,7 +15,7 @@ const styles = fromTailwind({
 })
 
 export const Bullet = ({ children, style, ...rest }) => (
-  <span style={{ ...styles.bullet, ...style }} {...rest}>
+  <span style={blend(styles.bullet, style)} {...rest}>
     {children}
   </span>
 )
