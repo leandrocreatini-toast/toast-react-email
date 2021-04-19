@@ -46,22 +46,22 @@ export const Footer = ({ style }) => {
             align='right'
           >
             <ImageLink
-              href='https://toasttab.com'
+              href='https://www.linkedin.com/company/toast-inc'
               style={styles.socialIcon}
               src='https://d2w1ef2ao9g8r9.cloudfront.net/images/email-images/linkedin.png?mtime=20210415162152&focal=none'
             />
             <ImageLink
-              href='https://toasttab.com'
+              href='https://www.facebook.com/ToastTab'
               style={styles.socialIcon}
               src='https://d2w1ef2ao9g8r9.cloudfront.net/images/email-images/facebook.png?mtime=20210415162152&focal=none'
             />
             <ImageLink
-              href='https://toasttab.com'
+              href='https://twitter.com/toasttab'
               style={styles.socialIcon}
               src='https://d2w1ef2ao9g8r9.cloudfront.net/images/email-images/twitter.png?mtime=20210415162152&focal=none'
             />
             <ImageLink
-              href='https://toasttab.com'
+              href='https://www.instagram.com/toasttab'
               style={styles.socialIcon}
               src='https://d2w1ef2ao9g8r9.cloudfront.net/images/email-images/instagram.png?mtime=20210415162152&focal=none'
             />

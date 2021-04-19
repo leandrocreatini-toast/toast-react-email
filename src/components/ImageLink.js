@@ -4,7 +4,7 @@ import React from 'react'
 import { fromTailwind } from '../utils/mailwind'
 
 const styles = fromTailwind({
-  link: 'cursor-pointer'
+  link: 'text-transparent'
 })
 
 export const ImageLink = ({ className, href, alt, ...rest }) => (

@@ -260,6 +260,7 @@ const displayStyles = {
 }
 
 const textColorStyles = {
+  'text-transparent': { color: 'transparent' },
   'text-white': { color: '#fff' },
   'text-default': { color: '#252525' },
   'text-secondary': { color: '#666666' },
