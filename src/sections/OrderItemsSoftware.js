@@ -6,20 +6,18 @@ import { Grid } from '../components/Grid'
 import { Heading } from '../components/Heading'
 import { FullRow, Row } from '../components/Row'
 import { ItemLineSoftware } from '../components/ItemLineSoftware'
-import { fromTailwind } from '../utils/mailwind'
+import { blend, fromTailwind } from '../utils/mailwind'
 import { Text } from '../components/Text'
 
 const styles = fromTailwind({
   container: 'mb-12',
   table: 'border-collapse',
+  tableHeader: 'border-b-2 border-t-0 border-r-0 border-l-0 border-gray-200',
   headingText: 'type-headline-2 mt-0 mb-2',
   text: 'type-default text-gray-150 mt-0 mb-3',
-  textBold: 'type-default text-gray-150 mt-0 mb-3 font-bold',
-  textPrice: 'type-default text-gray-150 mt-0 mb-3 text-right',
+  bold: 'font-bold',
   space: 'block h-6 w-full',
-  totalsGroup: 'w-full',
-  detailsGroup: 'mt-8 mb-0 pl-4',
-  detail: 'type-small mb-2',
+  totalsGroup: 'w-full mb-16 text-right',
   link: 'text-link'
 })
 
@@ -29,19 +27,19 @@ export const OrderItemsSoftware = ({ style }) => {
       {/* SOFTWARE */}
       <Grid style={styles.table}>
         {/* Heading */}
-        <Row>
+        <Row style={styles.tableHeader}>
           <Box span='4'>
-            <Heading level='3' style={styles.headingText}>
+            <Heading level='4' style={styles.headingText}>
               Upcoming Software Charges
             </Heading>
           </Box>
           <Box span='2'>
-            <Heading level='3' style={styles.headingText}>
+            <Heading level='4' style={styles.headingText}>
               Qty
             </Heading>
           </Box>
           <Box span='2'>
-            <Heading level='3' style={styles.headingText} align='right'>
+            <Heading level='4' style={styles.headingText} align='right'>
               Rate
             </Heading>
           </Box>
@@ -81,31 +79,13 @@ export const OrderItemsSoftware = ({ style }) => {
         <Row>
           <Box span='4' />
           <Box span='2'>
-            <Text style={styles.textBold}>Total</Text>
+            <Text style={blend(styles.text, styles.bold)}>Total</Text>
           </Box>
           <Box span='2'>
-            <Text style={styles.textPrice}>$294/month</Text>
+            <Text style={styles.text}>$294/month</Text>
           </Box>
         </Row>
       </Grid>
-
-      <ul style={styles.detailsGroup}>
-        <li style={styles.detail}>
-          New subscription charged after your restaurant opens. These fees may
-          vary from your normal cycle and your first bill may be prorated.
-        </li>
-        <li style={styles.detail}>
-          If you are billed in arrears, this invoice may be separate from your
-          primary cycle.
-        </li>
-        <li style={styles.detail}>
-          Contact Customer Care at{' '}
-          <a style={styles.link} href='tel:6176820225'>
-            (617) 682-0225
-          </a>{' '}
-          for questions about your total software bill.
-        </li>
-      </ul>
     </div>
   )
 }

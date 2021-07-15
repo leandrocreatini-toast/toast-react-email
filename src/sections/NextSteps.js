@@ -13,8 +13,8 @@ import { fromTailwind } from '../utils/mailwind'
 const styles = fromTailwind({
   header: 'mb-4',
   imageBox: 'w-8',
-  image: 'w-6 h-6 mt-0',
-  heading: 'type-headline-3 mt-1 mb-0',
+  image: 'w-6 h-6 mt-1',
+  heading: 'type-headline-2 mb-0',
   itemsGroup: { marginBottom: '-8px' }
 })
 
@@ -30,8 +30,8 @@ export const NextSteps = ({ style, restaurantName, items }) => {
             />
           </Box>
           <Box>
-            <Heading level='3' style={styles.heading}>
-              Next Steps for {restaurantName}...
+            <Heading level='2' style={styles.heading}>
+              What's next for you...
             </Heading>
           </Box>
         </Row>

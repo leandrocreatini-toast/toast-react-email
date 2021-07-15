@@ -9,20 +9,32 @@ import { FullRow } from '../components/Row'
 import { Text } from '../components/Text'
 
 const styles = fromTailwind({
-  logo: 'mb-12',
-  heading: 'type-headline-1 mb-6',
-  subtext: 'type-default text-gray-60'
+  logo: 'mb-8',
+  order: 'pb-10',
+  h1: 'type-headline-1 mb-6',
+  h2: 'type-headline-2',
+  text: 'type-default text-gray-60'
 })
 
 export const Head = ({ style, heading, text }) => {
   return (
     <Grid style={style}>
-      <ToastLogo style={styles.logo} />
       <FullRow>
-        <Heading level='1' style={styles.heading}>
+        <ToastLogo style={styles.logo} />
+      </FullRow>
+      <FullRow style={styles.order}>
+        <Heading level='4' style={styles.h2}>
+          Your Order #000014011
+        </Heading>
+        <Text style={styles.text}>
+          Placed on Mar 17, 2021, 8:45:35 AM (EST)
+        </Text>
+      </FullRow>
+      <FullRow>
+        <Heading level='1' style={styles.h1}>
           {heading}
         </Heading>
-        <Text style={styles.subtext}>{text}</Text>
+        <Text style={styles.text}>{text}</Text>
       </FullRow>
     </Grid>
   )

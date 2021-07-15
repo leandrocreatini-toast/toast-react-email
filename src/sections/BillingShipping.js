@@ -9,8 +9,6 @@ import { Row } from '../components/Row'
 import { Box } from '../components/Box'
 
 const styles = fromTailwind({
-  heading: 'type-headline-2',
-  subheading: 'type-headline-5',
   addressInfo: 'mt-6',
   methodInfo: 'mt-4',
   sectionHeading: 'type-headline-4 mt-1 mb-2',
@@ -20,14 +18,17 @@ const styles = fromTailwind({
 export const BillingShipping = ({ style }) => {
   return (
     <div style={style}>
-      <Heading level='3' style={styles.heading}>
-        Your Order #000014011
-      </Heading>
-      <Text style={styles.subheading}>
-        Placed on Mar 17, 2021, 8:45:35 AM (EST)
-      </Text>
       <Grid style={styles.addressInfo}>
         <Row>
+          <Box span='4'>
+            <Heading level='4' style={styles.sectionHeading}>
+              Shipping Info
+            </Heading>
+            <Text style={styles.text}>Vera Bruklich</Text>
+            <Text style={styles.text}>27 Longhill Rd</Text>
+            <Text style={styles.text}>Ashland, MA 01721-2426</Text>
+            <Text style={styles.text}>United States</Text>
+          </Box>
           <Box span='4'>
             <Heading level='4' style={styles.sectionHeading}>
               Billing Info
@@ -37,15 +38,6 @@ export const BillingShipping = ({ style }) => {
             <Text style={styles.text}>Ashland, MA 01721-2426</Text>
             <Text style={styles.text}>United States</Text>
             <Text style={styles.text}>T: 5082156150</Text>
-          </Box>
-          <Box span='4'>
-            <Heading level='4' style={styles.sectionHeading}>
-              Shipping Info
-            </Heading>
-            <Text style={styles.text}>Vera Bruklich</Text>
-            <Text style={styles.text}>27 Longhill Rd</Text>
-            <Text style={styles.text}>Ashland, MA 01721-2426</Text>
-            <Text style={styles.text}>United States</Text>
           </Box>
         </Row>
       </Grid>

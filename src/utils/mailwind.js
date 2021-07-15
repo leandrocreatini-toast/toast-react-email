@@ -16,28 +16,7 @@ const spacingRulesMapping = {
 const sizingConfig = {
   baseSize: 4,
   sizes: [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    12,
-    14,
-    16,
-    18,
-    20,
-    22,
-    24,
-    28,
-    32,
-    36,
-    40
+    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 22, 24, 28, 32, 36, 40
   ]
 }
 
@@ -165,14 +144,16 @@ const textAlignStyles = {
 }
 
 const typographyStyles = {
+  // Primary Header
   'type-headline-1': {
     fontFamily: '"Effra Medium", Arial',
     fontSize: '35px',
     lineHeight: '35px',
     letterSpacing: 'normal',
-    color: '#1C1C1C',
+    color: '#080809',
     margin: '0'
   },
+  // Medium Header
   'type-headline-2': {
     fontFamily: '"Effra Medium", Arial',
     fontSize: '18px',
@@ -189,6 +170,7 @@ const typographyStyles = {
     color: '#080809',
     margin: '0'
   },
+  // Small Header
   'type-headline-4': {
     fontFamily: '"Effra Medium", Arial',
     fontSize: '14px',
@@ -205,6 +187,7 @@ const typographyStyles = {
     color: '#080809',
     margin: '0'
   },
+  // Body
   'type-default': {
     fontFamily: '"Source Sans Pro", Arial',
     fontSize: '12px',
@@ -239,7 +222,8 @@ const typographyStyles = {
     lineHeight: '14px',
     letterSpacing: 1.2
   },
-  underline: { textDecoration: 'underline' }
+  underline: { textDecoration: 'underline' },
+  uppercase: { textTransform: 'uppercase' }
 }
 
 const displayStyles = {
