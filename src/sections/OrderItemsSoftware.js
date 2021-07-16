@@ -30,7 +30,7 @@ export const OrderItemsSoftware = ({ style }) => {
         <Row style={styles.tableHeader}>
           <Box span='4'>
             <Heading level='4' style={styles.headingText}>
-              Upcoming Software Charges
+              New Software Charges
             </Heading>
           </Box>
           <Box span='2'>
@@ -82,7 +82,7 @@ export const OrderItemsSoftware = ({ style }) => {
             <Text style={blend(styles.text, styles.bold)}>Total</Text>
           </Box>
           <Box span='2'>
-            <Text style={styles.text}>$294/month</Text>
+            <Text style={blend(styles.text, styles.bold)}>$294/month</Text>
           </Box>
         </Row>
       </Grid>

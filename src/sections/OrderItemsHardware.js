@@ -94,7 +94,7 @@ export const OrderItemsHardware = ({ style }) => {
             <Text style={blend(styles.text, styles.bold)}>Grand Total</Text>
           </Box>
           <Box span='2'>
-            <Text style={blend(styles.text, styles.textRight)}>$2,655.36</Text>
+            <Text style={blend(styles.text, styles.bold)}>$2,655.36</Text>
           </Box>
         </Row>
       </Grid>
