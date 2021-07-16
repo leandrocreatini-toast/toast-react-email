@@ -13,8 +13,8 @@ const styles = fromTailwind({
   container: 'mb-12',
   table: 'border-collapse',
   tableHeader: 'border-b-2 border-t-0 border-r-0 border-l-0 border-gray-200',
-  headingText: 'type-headline-2 mt-0 mb-2',
-  text: 'type-default text-gray-150 mt-0 mb-3',
+  headingText: 'type-headline-4 mt-0 mb-2',
+  text: 'type-default mt-0 mb-0',
   bold: 'font-bold',
   textRight: 'text-right',
   space: 'block h-6 w-full',
@@ -82,10 +82,19 @@ export const OrderItemsHardware = ({ style }) => {
         <Row>
           <Box span='4' />
           <Box span='2'>
+            <Text style={styles.text}>Tax</Text>
+          </Box>
+          <Box span='2'>
+            <Text style={blend(styles.text, styles.textRight)}>$173.24</Text>
+          </Box>
+        </Row>
+        <Row>
+          <Box span='4' />
+          <Box span='2'>
             <Text style={blend(styles.text, styles.bold)}>Grand Total</Text>
           </Box>
           <Box span='2'>
-            <Text style={blend(styles.text, styles.textRight)}>$2,482.12</Text>
+            <Text style={blend(styles.text, styles.textRight)}>$2,655.36</Text>
           </Box>
         </Row>
       </Grid>

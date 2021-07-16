@@ -11,16 +11,17 @@ import { Row } from '../components/Row'
 import { fromTailwind } from '../utils/mailwind'
 
 const styles = fromTailwind({
+  container: 'mb-2',
   header: 'mb-4',
   imageBox: 'w-8',
   image: 'w-6 h-6 mt-1',
-  heading: 'type-headline-2 mb-0',
+  heading: 'type-headline-4 mt-1',
   itemsGroup: { marginBottom: '-8px' }
 })
 
 export const PlanOverview = ({ planType, items }) => {
   return (
-    <Card>
+    <Card style={styles.container}>
       <Grid style={styles.header}>
         <Row>
           <Box style={styles.imageBox}>

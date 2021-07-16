@@ -20,7 +20,7 @@ const styles = fromTailwind({
   listItem: 'type-default mt-0 mb-2',
   link: 'text-link',
   questionCopy: 'type-default mb-8',
-  detailsGroup: 'mt-8 mb-16 pl-4',
+  detailsGroup: 'mt-8 mb-16',
   detail: 'type-small mb-2'
 })
 
@@ -60,31 +60,6 @@ function ProspectConfirmationEmail() {
         <OrderItemsHardware style={styles.section} />
         <OrderItemsSoftware style={styles.section} />
 
-        <Text style={styles.questionCopy}>
-          Questions? Contact us at{' '}
-          <a style={styles.link} href='mailto:toastsupport@toasttab.com'>
-            toastsupport@toasttab.com
-          </a>
-        </Text>
-
-        <ul style={styles.detailsGroup}>
-          <li style={styles.detail}>
-            New subscription charged after your restaurant opens. These fees may
-            vary from your normal cycle and your first bill may be prorated.
-          </li>
-          <li style={styles.detail}>
-            If you are billed in arrears, this invoice may be separate from your
-            primary cycle.
-          </li>
-          <li style={styles.detail}>
-            Contact Customer Care at{' '}
-            <a style={styles.link} href='tel:6176820225'>
-              (617) 682-0225
-            </a>{' '}
-            for questions about your total software bill.
-          </li>
-        </ul>
-
         <PlanOverview
           planType='Pay as You Go pricing'
           items={[
@@ -94,6 +69,31 @@ function ProspectConfirmationEmail() {
             <Text style={styles.listItem}>2.99%* + 15¢ per transaction.</Text>
           ]}
         />
+
+        <Text style={styles.questionCopy}>
+          Questions? Contact us at{' '}
+          <a style={styles.link} href='mailto:toastsupport@toasttab.com'>
+            toastsupport@toasttab.com
+          </a>
+        </Text>
+
+        <div style={styles.detailsGroup}>
+          <p style={styles.detail}>
+            *Software subscriptions will be charged to the payment method on
+            file for each restaurant where the software is in use.
+          </p>
+          <p style={styles.detail}>
+            New subscriptions will be charged on your next billing cycle in
+            addition to any other subscriptions you already have. These fees may
+            vary from your normal cycle and your first bill may be prorated. If
+            you are billed in arrears, this invoice may be separate from your
+            primary cycle. Contact Customer Care at{' '}
+            <a style={styles.link} href='tel:6176820225'>
+              (617) 682-0225
+            </a>{' '}
+            for questions about your total software bill.
+          </p>
+        </div>
       </div>
 
       <Footer />

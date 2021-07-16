@@ -8,8 +8,8 @@ const styles = fromTailwind({
     marginBottom: '24px',
     borderBottom: '2px solid #080809'
   },
-  subheading: 'mt-0 mb-0',
-  heading: 'mt-0 mb-0 uppercase'
+  subheading: 'type-headline-4 mt-0 mb-0',
+  heading: 'type-headline-2 mt-0 mb-0 uppercase'
 })
 
 export const LocationHeader = ({ number, name }) => {

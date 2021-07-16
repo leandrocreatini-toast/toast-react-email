@@ -157,7 +157,7 @@ const typographyStyles = {
   'type-headline-2': {
     fontFamily: '"Effra Medium", Arial',
     fontSize: '18px',
-    lineHeight: '32px',
+    lineHeight: '24px',
     letterSpacing: 'normal',
     color: '#080809',
     margin: '0'

@@ -12,7 +12,7 @@ const styles = fromTailwind({
   logo: 'mb-8',
   order: 'pb-10',
   h1: 'type-headline-1 mb-6',
-  h2: 'type-headline-2',
+  h2: 'type-headline-4',
   text: 'type-default text-gray-60'
 })
 
