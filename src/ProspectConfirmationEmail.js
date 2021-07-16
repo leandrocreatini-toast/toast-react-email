@@ -17,6 +17,7 @@ const styles = fromTailwind({
   head: 'mb-6',
   pageWrap: 'p-12 pb-22 bg-white',
   section: 'mb-16',
+  subsection: 'mb-6',
   listItem: 'type-default mt-0 mb-2',
   link: 'text-link',
   questionCopy: 'type-default mb-8',
@@ -55,10 +56,19 @@ function ProspectConfirmationEmail() {
           ]}
         />
 
-        <LocationHeader number={1} name="Monk's Cafe" />
-        <BillingShipping style={styles.section} />
-        <OrderItemsHardware style={styles.section} />
-        <OrderItemsSoftware style={styles.section} />
+        <div style={styles.section}>
+          <LocationHeader number={1} name="Monk's Cafe" />
+          <BillingShipping style={styles.subsection} />
+          <OrderItemsHardware style={styles.subsection} />
+          <OrderItemsSoftware />
+        </div>
+
+        <div style={styles.section}>
+          <LocationHeader number={2} name="Frank Pepe's Pizzeria" />
+          <BillingShipping style={styles.subsection} />
+          <OrderItemsHardware style={styles.subsection} />
+          <OrderItemsSoftware />
+        </div>
 
         <PlanOverview
           planType='Pay as You Go pricing'
