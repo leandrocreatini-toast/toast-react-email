@@ -30,7 +30,7 @@ export const OrderItemsSoftware = ({ style }) => {
         <Row style={styles.tableHeader}>
           <Box span='4'>
             <Heading level='4' style={styles.headingText}>
-              New Software Charges
+              New Software Charges*
             </Heading>
           </Box>
           <Box span='2'>
