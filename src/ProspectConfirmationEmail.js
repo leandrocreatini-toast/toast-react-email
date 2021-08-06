@@ -11,6 +11,7 @@ import { Head } from './sections/Head'
 import { NextSteps } from './sections/NextSteps'
 import { OrderItemsHardware } from './sections/OrderItemsHardware'
 import { OrderItemsSoftware } from './sections/OrderItemsSoftware'
+import { OrderSummary } from './sections/OrderSummary'
 import { PlanOverview } from './sections/PlanOverview'
 
 const styles = fromTailwind({
@@ -69,6 +70,8 @@ function ProspectConfirmationEmail() {
           <OrderItemsHardware style={styles.subsection} />
           <OrderItemsSoftware />
         </div>
+
+        <OrderSummary style={styles.section} />
 
         <PlanOverview
           planType='Pay as You Go pricing'

@@ -31,27 +31,28 @@ export const BillingShipping = ({ style }) => {
           </Box>
           <Box span='4'>
             <Heading level='4' style={styles.sectionHeading}>
-              Billing Info
-            </Heading>
-            <Text style={styles.text}>Vera Bruklich</Text>
-            <Text style={styles.text}>27 Longhill Rd</Text>
-            <Text style={styles.text}>Ashland, MA 01721-2426</Text>
-            <Text style={styles.text}>United States</Text>
-            <Text style={styles.text}>T: 5082156150</Text>
-          </Box>
-        </Row>
-      </Grid>
-      <Grid style={styles.methodInfo}>
-        <Row>
-          <Box span='4'>
-            <Heading level='4' style={styles.sectionHeading}>
               Shipping Method
             </Heading>
             <Text style={styles.text}>Toast Shipping - Ground</Text>
           </Box>
-          <Box span='4'></Box>
         </Row>
       </Grid>
+      {/* <Grid style={styles.methodInfo}>
+
+      </Grid> */}
     </div>
   )
 }
+
+/*
+<Box span='4'>
+  <Heading level='4' style={styles.sectionHeading}>
+    Billing Info
+  </Heading>
+  <Text style={styles.text}>Vera Bruklich</Text>
+  <Text style={styles.text}>27 Longhill Rd</Text>
+  <Text style={styles.text}>Ashland, MA 01721-2426</Text>
+  <Text style={styles.text}>United States</Text>
+  <Text style={styles.text}>T: 5082156150</Text>
+</Box>
+*/

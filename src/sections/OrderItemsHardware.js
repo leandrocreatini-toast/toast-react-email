@@ -1,8 +1,8 @@
 // global
 import * as React from 'react'
+// local
 import { Box } from '../components/Box'
 import { Grid } from '../components/Grid'
-// local
 import { Heading } from '../components/Heading'
 import { ItemLine } from '../components/ItemLine'
 import { FullRow, Row } from '../components/Row'

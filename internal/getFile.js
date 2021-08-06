@@ -1,5 +1,7 @@
-const fs = require('fs');
-const Path = require('path');
+const fs = require('fs')
+const Path = require('path')
+
+const options = { encoding: 'utf8' }
 
 /**
  * Get the file from a relative path
@@ -8,13 +10,11 @@ const Path = require('path');
  */
 function getFile(relativePath) {
   return new Promise((resolve, reject) => {
-    const path = Path.join(__dirname, relativePath);
-
-    return fs.readFile(path, { encoding: 'utf8' }, (err, file) => {
-      if (err) return reject(err);
-      return resolve(file);
-    })
-  });
+    const path = Path.join(__dirname, relativePath)
+    return fs.readFile(path, options, (err, file) =>
+      err ? reject(err) : resolve(file)
+    )
+  })
 }
 
 module.exports = getFile

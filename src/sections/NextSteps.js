@@ -18,7 +18,7 @@ const styles = fromTailwind({
   itemsGroup: { marginBottom: '-8px' }
 })
 
-export const NextSteps = ({ style, restaurantName, items }) => {
+export const NextSteps = ({ style, items }) => {
   return (
     <Card style={style}>
       <Grid style={styles.header}>
