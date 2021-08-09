@@ -5,6 +5,7 @@ import { fromTailwind } from './utils/mailwind'
 import { Layout } from './components/Layout'
 import { Text } from './components/Text'
 import { LocationHeader } from './sections/LocationHeader'
+import { BillingInfo } from './sections/BillingInfo'
 import { BillingShipping } from './sections/BillingShipping'
 import { Footer } from './sections/Footer'
 import { Head } from './sections/Head'
@@ -58,6 +59,10 @@ function ProspectConfirmationEmail() {
         />
 
         <div style={styles.section}>
+          <BillingInfo />
+        </div>
+
+        <div style={styles.section}>
           <LocationHeader number={1} name="Monk's Cafe" />
           <BillingShipping style={styles.subsection} />
           <OrderItemsHardware style={styles.subsection} />
@@ -73,6 +78,13 @@ function ProspectConfirmationEmail() {
 
         <OrderSummary style={styles.section} />
 
+        <Text style={styles.questionCopy}>
+          Questions? Contact us at{' '}
+          <a style={styles.link} href='mailto:toastsupport@toasttab.com'>
+            toastsupport@toasttab.com
+          </a>
+        </Text>
+
         <PlanOverview
           planType='Pay as You Go pricing'
           items={[
@@ -82,13 +94,6 @@ function ProspectConfirmationEmail() {
             <Text style={styles.listItem}>2.99%* + 15¢ per transaction.</Text>
           ]}
         />
-
-        <Text style={styles.questionCopy}>
-          Questions? Contact us at{' '}
-          <a style={styles.link} href='mailto:toastsupport@toasttab.com'>
-            toastsupport@toasttab.com
-          </a>
-        </Text>
 
         <div style={styles.detailsGroup}>
           <p style={styles.detail}>

@@ -10,7 +10,6 @@ import { Text } from '../components/Text'
 import { blend, fromTailwind } from '../utils/mailwind'
 
 const styles = fromTailwind({
-  container: 'mb-12',
   table: 'border-collapse',
   tableHeader: 'border-b-2 border-t-0 border-r-0 border-l-0 border-gray-200',
   headingText: 'type-headline-4 mt-0 mb-2',
